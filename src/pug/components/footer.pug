@@ -1,0 +1,45 @@
+-
+  var socialLinks = [
+    {
+      img: 'https://via.placeholder.com/32x32',
+      title: 'Страница в фейсбуке',
+    },
+    {
+      img: 'https://via.placeholder.com/32x32',
+      title: 'Группа в контакте',
+    },
+    {
+      img: 'https://via.placeholder.com/32x32',
+      title: 'Профиль в инстаграмме',
+    },
+    {
+      img: 'https://via.placeholder.com/32x32',
+      title: 'Аккаунт в твиттере',
+    },
+  ]
+
+  var infoLinks = [
+    'Для поставщиков',
+    'О производстве',
+    'Наши документы',
+    'Экологические стандарты',
+  ]
+
+footer.page-footer
+
+  ul.page-footer__social.social-list
+    each item in socialLinks
+      li
+        a.social-list__link
+          img.social-list__img(src= item.img, alt="")
+          span.visually-hidden= item.title
+
+  ul.page-footer__info.info-links
+    each item in infoLinks
+      li
+        a.info-links__link= item
+
+  div.page-footer__copyright.copyright
+    a.copyright__link(href='https://htmlacademy.ru/intensive/htmlcss')
+      img.copyright__logo(src='https://via.placeholder.com/108x39', width='108', height='39' alt='')
+      p.copyright__text Сделано в HTML Academy © 2019
