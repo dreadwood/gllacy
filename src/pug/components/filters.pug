@@ -1,0 +1,98 @@
+-
+  var sort = [
+    {
+      value: 'по популярности',
+      checked: true,
+    },
+    {
+      value: 'сначала недорогие',
+      checked: false,
+    },
+    {
+      value: 'сначала дорогие',
+      checked: false,
+    },
+    {
+      value: 'по жирности',
+      checked: false,
+    },
+  ]
+
+  var fat = [
+    {
+      value: '0',
+      label: '0%',
+      checked: false,
+    },
+    {
+      value: '10',
+      label: 'до 10%',
+      checked: true,
+    },
+    {
+      value: '30',
+      label: 'до 30%',
+      checked: false,
+    },
+    {
+      value: 'more_30',
+      label: 'выше 10%',
+      checked: false,
+    },
+  ]
+
+  var composition = [
+    {
+      value: 'chocolate',
+      label: 'шоколадные',
+      checked: true,
+    },
+    {
+      value: 'sugar',
+      label: 'сахарные присыпки',
+      checked: true,
+    },
+    {
+      value: 'fruit',
+      label: 'фрукты',
+      checked: false,
+    },
+    {
+      value: 'syrup',
+      label: 'сиропы',
+      checked: false,
+    },
+    {
+      value: 'jam',
+      label: 'джемы',
+      checked: false,
+    },
+  ]
+
+form.filters(action='', method='get')
+  div.filters__row
+    fieldset
+      legend Сортировка:
+      select(name='sort')
+        each item in sort
+          option(selected=item.checked)= item.value
+
+    fieldset
+      legend Цена: 100 ₽ – 500 ₽:
+      input(type='range', name='price', min='100', max='800', value='400')
+      label.visually-hidden Цена
+
+    fieldset
+      legend Жирность:
+      each item in fat
+        input.visually-hidden(id=`fat_${item.value}`, type='radio', name='fat', value=item.value, checked=item.checked)
+        label(for=`fat_${item.value}`)=item.label
+
+  div.filters__row
+    fieldset
+      legend Наполнители::
+      each item in composition
+        input.visually-hidden(id=`composition_${item.value}`, type='checkbox', name='composition', value=item.value, checked=item.checked)
+        label(for=`composition_${item.value}`)=item.label
+
+    button(type="submit") Применить
