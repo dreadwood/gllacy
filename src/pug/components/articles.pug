@@ -1,0 +1,14 @@
+section.articles
+  div.articles__wrapper
+    h2.visually-hidden Полезные статьи
+
+    article.articles__item.news
+      p.news__label Новое в нашем блоге
+      h3.news__title 10 способов сервировки фруктовых щербетов к столу
+
+    article.articles__item.subscription
+      p.news__label Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
+      form(action="")
+        input.subscription__input(id="subscription_email", type="email", name="email", required)
+        label.visually-hidden(for="subscription_email") Почта
+        button.subscription__btn(type="submit") Отправить
