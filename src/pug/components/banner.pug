@@ -1,0 +1,32 @@
+-
+  var iceCream = [
+    {
+      src: 'https://via.placeholder.com/1200x966',
+      title: 'Крем-брюле и пломбир с малиновым джемом',
+    },
+    {
+      src: 'https://via.placeholder.com/1200x966',
+      title: 'Шоколадный пломбир и лимонный сорбет',
+    },
+    {
+      src: 'https://via.placeholder.com/1200x966',
+      title: 'Пломбир с помадкой и клубничный щербет',
+    },
+  ]
+
+section.banner
+  div.banner__wrapper
+    h2.visually-hidden Спецпредложение – комбо
+
+    ul.banner__list
+      each item in iceCream
+        li.banner__item
+          img.banner__item-img(src=item.src, width="1200", height="966" alt=item.title)
+          p.banner__item-name=item.title
+
+    button.banner__btn-buy(type="button") Давайте оба!
+
+    div.banner__controls
+      button.banner__controls-btn Слайд 1
+      button.banner__controls-btn Слайд 2
+      button.banner__controls-btn Слайд 3

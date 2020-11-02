@@ -1,0 +1,35 @@
+header.page-header
+  div.page-header__wrapper
+    a.page-header__logo(href="#")
+      img
+
+    nav.page-header__menu.menu-top
+      ul
+        li.menu-top__dropdown
+          button.menu-top__link Каталог
+          div.menu-top__dropdown-menu
+            a.menu-top__dropdown-link.menu-top__dropdown-link--mark Новинки
+            a.menu-top__dropdown-link Сливочное
+            a.menu-top__dropdown-link Щербеты
+            a.menu-top__dropdown-link Фруктовый лед
+            a.menu-top__dropdown-link Мелорин
+        li
+          a.menu-top__link Доставка и оплата
+        li
+          a.menu-top__link О компании
+
+    div.page-header__btn-dropdown.btn-drop
+      button.btn-drop__btn(type="button") Поиск
+      div.btn-drop__dropdown
+        form.page-header__search.search(action="")
+          input(type="search" placeholder="Крем-брюле" aria-label="Search")
+    div.page-header__btn-dropdown.btn-drop
+      button.btn-drop__btn(type="button") Вход
+      div.btn-drop__dropdown
+    div.page-header__btn-dropdown.btn-drop
+      button.btn-drop__btn(type="button") Пусто
+      div.btn-drop__dropdown
+
+    div.page-header__contact
+      p.page-header__contact-working-hours с 10 до 20, ежедневно
+      a.page-header__contact-tel(href="tel:+78124502525") 8 812 450-25-25
