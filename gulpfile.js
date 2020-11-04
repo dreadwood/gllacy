@@ -1,7 +1,24 @@
+// const autoprefixer = require('autoprefixer');
 const del = require('del');
 const gulp = require('gulp');
+const plumber = require('gulp-plumber');
+// const postcss = require('gulp-postcss');
 const pug = require('gulp-pug');
+const sass = require('gulp-sass');
+const sourcemap = require('gulp-sourcemaps');
 const sync = require('browser-sync').create();
+
+const style = () => {
+  return gulp.src('src/sass/style.scss')
+      .pipe(plumber())
+      .pipe(sourcemap.init())
+      .pipe(sass())
+      // .pipe(postcss([autoprefixer({grid: true})]))
+      .pipe(gulp.dest('dist/css'))
+      .pipe(sourcemap.write('.'))
+      .pipe(gulp.dest('dist/css'))
+      .pipe(sync.stream());
+}
 
 const html = () => {
   return gulp.src('src/pug/pages/*.pug')
@@ -21,6 +38,7 @@ const server = () => {
   });
 
   gulp.watch('src/**/*.pug', gulp.series(html, refresh));
+  gulp.watch('src/sass/**/*.scss', gulp.series(style));
 }
 
 const refresh = (done) => {
@@ -45,6 +63,7 @@ const copy = () => {
 const build = gulp.series(
   clean,
   copy,
+  style,
   html,
 )
 
