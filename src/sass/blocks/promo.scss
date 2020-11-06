@@ -1,0 +1,45 @@
+.promo {
+
+}
+
+.promo__wrapper {
+  @extend %wrapper;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.promo__item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 48.8%;
+  padding: 16px 22px 22px 16px;
+
+  background-color: var(--color-bg-blue);
+  border-radius: 16px;
+}
+
+.promo_title {
+  margin: 0;
+  margin-bottom: 16px;
+
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: 700;
+}
+
+.promo__description {
+  margin: 0;
+  margin-bottom: 42px;
+
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+}
+
+.promo-btn {
+  align-self: flex-end;
+  margin-top: auto;
+}
