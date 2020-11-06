@@ -1,4 +1,6 @@
 .main-btn {
+  @include transition;
+
   display: block;
   padding: 15px 22px 16px 22px;
 

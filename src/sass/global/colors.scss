@@ -4,11 +4,6 @@
 
   --color-text: #323232;
 
-  --color-modal-bg: #F8F7F4;
-  --color-input-border: #D3D3D2; // rgba(178, 178, 178, 0.52)
-  --color-input-border-actv: rgba(46, 136, 228, 0.52);
-  --color-input-placeholder: #999999;
-
   --color-bg-green: #849D8F;
   --color-bg-blue: #8996A6;
   --color-bg-brown: #9D8B84;
@@ -33,27 +28,9 @@
   --btn-actv-bg-shadow: inset 0px 2px 2px #942718;
 
 
-  // #323232 Цвет иконок (есть еще #343434) / текста
-  // #E84D37 фон иконок
-  // #2C2829 цвет иконок (крестик)
-  // #ABABAB серый цвет текста
-  // #CACAC7 разделитель корзины
-  // rgba(255, 255, 255, 0.2) беграунд фильтров
-
-
-  // выпадающего меню
-  // тень               0px 20px 20px rgba(0, 0, 0, 0.4)
-  // разделитель        rgba(50, 50, 50, 0.2)
-  // наведение          #FBDED7
-  // нажатие            #F6B5A5
-  // выбрана стр        #D07058
-
-  // клавиши навигация шапка
-  // нажатие фон        #EDEDED
-  // нажатие тень       inset 0px 2px 1px #696969
-  // выбрана стр        #D07058
-
-  // ссылки
+  // links
+  --lnk-text-color: var(--color-white);
+  --lnk-hvr-text-color: #FFBC9E;
   // обычное подч       rgba(255, 255, 255, 0.3)
   // наведен текст      #FFBC9E
   // наведен подч       rgba(255, 188, 158, 0.3)
@@ -62,6 +39,51 @@
   // фон навед          #E84D37
   // фон навед под      rgba(232, 77, 55, 0.3)
   // фон нажат          --//--
+
+
+  // menu-top
+  --menu-link-text: var(--color-white);
+  --menu-link-hvr-text: var(--color-text);
+  --menu-link-hvr-bg: var(--color-white);
+  --menu-link-actv-bg: #EDEDED;
+  --menu-link-actv-shadow: inset 0px 2px 1px #696969;
+  --menu-link-select-bg: #D07058;
+  --menu-link-separator: rgba(255, 255, 255, 0.2);
+
+  --menu-drp-bg: var(--color-white);
+  --menu-drp-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
+  --menu-drp-text: var(--color-text);
+  --menu-drp-hvr-bg: #FBDED7;
+  --menu-drp-actv-bg: #F6B5A5;
+  --menu-drp-select-text: var(--color-white);
+  --menu-drp-select-bg: #D07058;
+  --menu-drp-separator: rgba(50, 50, 50, 0.2);
+
+
+  // btn-drop
+  --btn-drop-text: var(--color-white);
+  --btn-drop-bg: rgba(255, 255, 255, 0.2);
+  --btn-drop-hvr-text: var(--color-text);
+  --btn-drop-hvr-bg: var(--color-white);
+
+
+  // input & modal
+  --modal-bg: #F8F7F4;
+  --modal-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
+  --input-text: var(--color-text);
+  --input-ph-text: #999999;
+  --input-bg: var(--color-white);
+  --input-border: 0 0 0 1px rgba(178, 178, 178, 0.52);
+  --input--hvr-border: 0 0 0 2px rgba(178, 178, 178, 0.52);
+  --input--actv-border: 0 0 0 2px rgba(46, 136, 228, 0.52);
+
+
+  // #323232 Цвет иконок (есть еще #343434) / текста
+  // #E84D37 фон иконок
+  // #2C2829 цвет иконок (крестик)
+  // #ABABAB серый цвет текста
+  // #CACAC7 разделитель корзины
+  // rgba(255, 255, 255, 0.2) беграунд фильтров
 
 
   // слайдер клавиши

@@ -1,0 +1,31 @@
+.btn-drop {
+
+}
+
+.btn-drop__btn {
+  @include transition;
+
+  padding: 8px 16px;
+
+  font-weight: 500;
+  color: var(--btn-drop-text);
+
+  background-color: var(--btn-drop-bg);
+  border: none;
+  border-radius: 20px;
+
+  &:hover,
+  &:focus {
+    color: var(--btn-drop-hvr-text);
+
+    background-color: var(--btn-drop-hvr-bg);
+  }
+}
+
+.btn-drop__dropdown {
+  padding: 20px 15px;
+
+  background-color: var(--modal-bg);
+  border-radius: 4px;
+  box-shadow: var(--modal-shadow);
+}

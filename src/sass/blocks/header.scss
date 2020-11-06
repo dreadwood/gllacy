@@ -1,0 +1,51 @@
+.header {
+  display: block;
+}
+
+.header__wrapper {
+  @extend %wrapper;
+}
+
+.header__logo {
+
+}
+
+.header__menu {
+
+}
+
+.header__btn-dropdown {
+
+}
+
+.header__search {
+
+}
+
+.header__contact {
+  font-weight: 700;
+  text-align: right;
+}
+
+.header__contact-working-hours {
+  margin: 0;
+  margin-bottom: 8px;
+
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.header__contact-tel {
+  @include transition(color);
+
+  display: block;
+
+  font-style: 22px;
+  line-height: 24px;
+  color: var(--lnk-text-color);
+
+  &:hover,
+  &:focus {
+    color: var(--lnk-hvr-text-color)
+  }
+}

@@ -1,0 +1,126 @@
+$link-pdng-t: 6px;
+$link-pdng-rl: 13px;
+$link-pdng-b: 7px;
+
+.menu-top {
+  @extend %reset-list;
+
+  display: flex;
+}
+
+.menu-top__dropdown {
+  margin-right: 32px;
+}
+
+.menu-top__link {
+  @include transition;
+
+  position: relative;
+
+  padding: $link-pdng-t $link-pdng-rl $link-pdng-b $link-pdng-rl;
+
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  color: var(--menu-link-text);
+
+  border-radius: 26px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &[href]:hover,
+  &[href]:focus {
+    color: var(--menu-link-hvr-text);
+
+    background-color: var(--menu-link-hvr-bg);
+    border-radius: 26px;
+  }
+
+  &[href]:active {
+    background-color: var(--menu-link-actv-bg);
+    box-shadow: var(--menu-link-actv-shadow);
+  }
+
+  &:not([href]) {
+    background-color: var(--menu-link-select-bg);
+  }
+
+  &[href]:after {
+    content: "";
+
+    position: absolute;
+    bottom: $link-pdng-b;
+    left: $link-pdng-rl;
+
+    width: calc(100% - #{$link-pdng-rl} * 2);
+    height: 1px;
+
+    background-color: var(--menu-link-separator);
+
+  }
+}
+
+.menu-top__dropdown-menu {
+  min-width: 143px;
+  padding: 3px 0 5px 0;
+
+  background-color: var(--menu-drp-bg);
+  border-radius: 4px;
+  box-shadow: var(--menu-drp-shadow);
+}
+
+.menu-top__dropdown-link {
+  @include transition;
+
+  display: block;
+  padding: 7px 15px 8px 22px;
+
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--menu-drp-text);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &[href]:hover,
+  &[href]:focus {
+    background-color: var(--menu-drp-hvr-bg);
+  }
+
+  &[href]:active {
+    background-color: var(--menu-drp-actv-bg);
+  }
+
+  &:not([href]) {
+    color: var(--menu-drp-select-text);
+
+    background-color: var(--menu-drp-select-bg);
+  }
+
+  &--mark {
+    position: relative;
+
+    margin-bottom: 8px;
+
+    font-weight: 700;
+
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      bottom: -4px;
+      left: 6px;
+
+      width: calc(100% - 15px);
+      height: 1px;
+
+      background-color: var(--menu-drp-separator);
+    }
+  }
+}
