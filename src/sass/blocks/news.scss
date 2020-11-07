@@ -1,0 +1,29 @@
+.news {
+  min-height: 220px;
+  padding: 23px 20px;
+
+  color: var(--news-text);
+
+  background-color: var(--news-bg);
+  border-radius: 16px;
+}
+
+.news__label {
+  width: 60%;
+  margin: 0;
+  margin-bottom: 15px;
+
+
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+}
+
+.news__title {
+  width: 60%;
+
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  text-decoration: underline;
+}

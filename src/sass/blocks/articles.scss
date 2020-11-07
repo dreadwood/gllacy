@@ -1,0 +1,15 @@
+.articles {
+
+}
+
+.articles__wrapper {
+  @extend %wrapper;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.articles__item {
+  width: 48.8%;
+}

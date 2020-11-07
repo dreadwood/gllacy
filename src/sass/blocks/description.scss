@@ -4,7 +4,9 @@
 
 .description__wrapper {
   @extend %wrapper;
+}
 
+.description__content {
   padding: 24px 20px 3px 20px;
 
   background-color: var(--color-bg-brown);
