@@ -1,0 +1,38 @@
+.social-list {
+  @extend %reset-list;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-list__item {
+  margin-right: 12px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social-list__link {
+  display: block;
+
+  width: 32px;
+  height: 32px;
+
+  background-color: var(--social-bg);
+  border: 2px solid var(--social-border);
+  border-radius: 50%;
+
+  &:hover,
+  &:focus {
+    background-color: var(--social-hvr-bg);
+  }
+
+  &:active {
+    border-color: var(--social-actv-border);
+  }
+}
+
+.social-list__img {
+  border-radius: 50%;
+}

@@ -12,10 +12,14 @@
 
 // blocks
 @import "blocks/main-btn";
+@import "blocks/link";
 @import "blocks/input";
 @import "blocks/product";
 @import "blocks/news";
 @import "blocks/subscription";
+@import "blocks/social-list";
+@import "blocks/info-links";
+@import "blocks/copyright";
 
 @import "blocks/header";
 @import "blocks/menu-top";
@@ -24,3 +28,5 @@
 @import "blocks/popular-goods";
 @import "blocks/description";
 @import "blocks/articles";
+
+@import "blocks/footer";

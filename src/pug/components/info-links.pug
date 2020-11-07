@@ -1,0 +1,29 @@
+-
+  var infoLinks = [
+    {
+      text: 'Для поставщиков',
+      icon: 'img/sprite.svg#icon-heart',
+    },
+    {
+      text: 'О производстве',
+      icon: false,
+    },
+    {
+      text: 'Наши документы',
+      icon: false,
+    },
+    {
+      text: 'Экологические стандарты',
+      icon: false,
+    },
+  ]
+
+ul.info-links
+  each item in infoLinks
+    li.info-links__item
+      if item.icon
+        svg(width='15' height='13')
+          use(xlink:href= item.icon)
+        a.info-links__link.info-links__link--icon.link(href='#')= item.text
+      else
+        a.info-links__link.link(href='#')= item.text

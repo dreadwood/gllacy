@@ -1,0 +1,26 @@
+-
+  var socialLinks = [
+    {
+      img: 'https://via.placeholder.com/32x32',
+      title: 'Страница в фейсбуке',
+    },
+    {
+      img: 'https://via.placeholder.com/32x32',
+      title: 'Группа в контакте',
+    },
+    {
+      img: 'https://via.placeholder.com/32x32',
+      title: 'Профиль в инстаграмме',
+    },
+    {
+      img: 'https://via.placeholder.com/32x32',
+      title: 'Аккаунт в твиттере',
+    },
+  ]
+
+ul.social-list
+  each item in socialLinks
+    li.social-list__item
+      a.social-list__link(href='#')
+        img.social-list__img(src= item.img, alt='')
+        span.visually-hidden= item.title

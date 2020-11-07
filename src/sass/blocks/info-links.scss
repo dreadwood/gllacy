@@ -1,0 +1,24 @@
+.info-links {
+  @extend %reset-list;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.info-links__item {
+  width: 50%;
+}
+
+.info-links__link {
+  padding-left: 22px;
+
+  font-size: 13px;
+  line-height: 18px;
+
+  &--icon {
+    padding-left: 7px;
+
+    font-weight: 700;
+  }
+}
