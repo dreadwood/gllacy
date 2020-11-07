@@ -33,6 +33,6 @@ section.popular-goods
     h2.visually-hidden Популярные товары
 
     ul.popular-goods__list
-      li.popular-goods__item
-        each item in iceCream
+      each item in iceCream
+        li.popular-goods__item
           +product(item.name, item.img, item.price, item.hit)

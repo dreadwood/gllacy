@@ -78,6 +78,15 @@
   --input--actv-border: 0 0 0 2px rgba(46, 136, 228, 0.52);
 
 
+  // product
+  --prod-text: var(--color-white);
+  --prod-price-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+  --prod-separator: rgba(255, 255, 255, 0.2);
+  --prod-hvr-bg: rgba(255, 255, 255, 0.2);
+  --prod-hvr-bg-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
+  --prod-label-bg: var(--color-white);
+
+
   // #323232 Цвет иконок (есть еще #343434) / текста
   // #E84D37 фон иконок
   // #2C2829 цвет иконок (крестик)

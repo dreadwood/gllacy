@@ -1,9 +1,11 @@
 mixin product(name, src, price, hit)
   div.product
+    div.product__img-wrapper
       img.product__img(src=src, width='267', height='267', alt=name)
       if hit
         div.product__label.product__label--hit
       p.product__price #{price} ₽
         span.product__units=' /кг'
-      h3.product__title=name
+    h3.product__title=name
+    div.product__hvr-wrapper
       a.product__btn.main-btn(href='#') Быстрый просмотр

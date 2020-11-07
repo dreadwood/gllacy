@@ -1,0 +1,19 @@
+.popular-goods {
+
+}
+
+.popular-goods__wrapper {
+  @extend %wrapper;
+}
+
+.popular-goods__list {
+  @extend %reset-list;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.popular-goods__item {
+
+}
