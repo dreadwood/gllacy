@@ -34,8 +34,6 @@
   --lnk-hvr-text-color: #FFBC9E;
   --lnk-hvr-separator: rgba(255, 188, 158, 0.3);
 
-
-  // нажит              --//--
   // фон подч           rgba(50, 50, 50, 0.3)
   // фон навед          #E84D37
   // фон навед под      rgba(232, 77, 55, 0.3)
@@ -90,7 +88,14 @@
 
   // news
   --news-text: var(--color-text);
+  --news-link-hvr: #E84D37;
   --news-bg: var(--color-white);
+
+
+  // contact
+  --contact-text: var(--color-text);
+  --contact-link-hvr: #E84D37;
+  --contact-bg: var(--color-white);
 
 
   // social

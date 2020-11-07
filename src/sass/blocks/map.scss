@@ -1,0 +1,10 @@
+.map {
+
+}
+
+.map__wrapper {
+  @extend %wrapper;
+
+  display: flex;
+  justify-content: flex-end;
+}
