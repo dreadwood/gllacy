@@ -1,0 +1,25 @@
+.breadcrumbs {
+  @extend %reset-list;
+
+  display: flex;
+}
+
+.breadcrumbs__item {
+  margin-right: 8px;
+  padding-right: 14px;
+
+  // background-image: url();
+  background-repeat: no-repeat;
+  background-size: 6px;
+  background-position: right 0 center;
+
+  &:last-child {
+    margin-right: 0;
+
+    background-image: none;
+  }
+}
+
+.breadcrumbs__link {
+
+}

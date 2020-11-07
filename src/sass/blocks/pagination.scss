@@ -1,0 +1,43 @@
+.pagination {
+
+}
+
+.pagination__btn-nav {
+  &--prev {
+
+  }
+
+  &--next {
+
+  }
+}
+
+.pagination__list {
+  @extend %reset-list;
+
+  display: flex;
+}
+
+.pagination__item {
+  margin-right: 4px;
+}
+
+.pagination__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 26px;
+  height: 26px;
+
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+
+  border-radius: 50%;
+
+  &:not([href]) {
+    color: var(--pagin-actv-text);
+
+    background-color: var(--pagin-actv-bg);
+  }
+}

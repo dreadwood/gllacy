@@ -1,5 +1,5 @@
 mixin breadcrumbs(list)
   ul.breadcrumbs
-        each item, index in list
-          li.breadcrumbs__item
-            a.breadcrumbs__link(href= (index === list.length - 1) ? null : '#')= item
+    each item, index in list
+      li.breadcrumbs__item
+        a.breadcrumbs__link.link(href= (index === list.length - 1) ? null : '#')= item

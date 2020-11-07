@@ -3,12 +3,14 @@
 
   color: var(--lnk-text-color);
 
-  text-decoration: underline;
-  text-decoration-color: var(--lnk-separator);
-  text-underline-position: under;
+  &[href] {
+    text-decoration: underline;
+    text-decoration-color: var(--lnk-separator);
+    text-underline-position: under;
+  }
 
-  &:hover,
-  &:focus {
+  &[href]:hover,
+  &[href]:focus {
     color: var(--lnk-hvr-text-color);
 
     text-decoration-color: var(--lnk-hvr-separator);
