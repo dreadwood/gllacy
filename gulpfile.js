@@ -14,14 +14,14 @@ const sync = require('browser-sync').create();
 
 const style = () => {
   return gulp.src('src/sass/style.scss')
-      .pipe(plumber())
-      .pipe(sourcemap.init())
-      .pipe(sass())
-      // .pipe(postcss([autoprefixer({grid: true})]))
-      .pipe(gulp.dest('dist/css'))
-      .pipe(sourcemap.write('.'))
-      .pipe(gulp.dest('dist/css'))
-      .pipe(sync.stream());
+    .pipe(plumber())
+    .pipe(sourcemap.init())
+    .pipe(sass())
+    // .pipe(postcss([autoprefixer({grid: true})]))
+    .pipe(gulp.dest('dist/css'))
+    .pipe(sourcemap.write('.'))
+    .pipe(gulp.dest('dist/css'))
+    .pipe(sync.stream());
 }
 
 const html = () => {
@@ -49,7 +49,7 @@ const webp = () => {
 }
 
 const sprite = () => {
-  return gulp.src('dist/img/icon-*.svg')
+  return gulp.src('src/img/icon-*.svg')
   .pipe(svgstore({inlineSvg: true}))
   .pipe(rename('sprite.svg'))
   .pipe(gulp.dest('dist/img'));
@@ -66,6 +66,7 @@ const server = () => {
 
   gulp.watch('src/**/*.pug', gulp.series(html, refresh));
   gulp.watch('src/sass/**/*.scss', gulp.series(style));
+  gulp.watch('src/img/icon-*.svg', gulp.series(sprite, html, refresh));
 }
 
 const refresh = (done) => {
@@ -101,5 +102,6 @@ const start = gulp.series(
   server,
 )
 
+exports.sprite = sprite;
 exports.build = build;
 exports.start = start;
