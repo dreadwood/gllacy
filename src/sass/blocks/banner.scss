@@ -1,3 +1,66 @@
 .banner {
 
 }
+
+.banner__wrapper {
+  @extend %wrapper;
+}
+
+.banner__list {
+  @extend %reset-list;
+}
+
+.banner__item {
+
+}
+
+.banner__item-name {
+  width: 700px;
+  margin: 0;
+  margin-bottom: 27px;
+
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.banner__btn-buy {
+
+}
+
+.banner__controls {
+  display: flex;
+}
+
+.banner__controls-btn {
+  @include transition(background-color);
+
+  display: block;
+  width: 21px;
+  height: 21px;
+  margin-right: 8px;
+  padding: 0;
+
+  background-color: transparent;
+  border: 2px solid var(--banner-pagin-border);
+  border-radius: 50%;
+  outline: none;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:not(.banner__controls-btn--actv):hover,
+  &:not(.banner__controls-btn--actv):focus {
+    background-color: var(--banner-pagin-hvr-bg);
+  }
+
+  &:not(.banner__controls-btn--actv):active {
+    background-color: var(--banner-pagin-actv-bg);
+  }
+
+  &--actv {
+    background-color: var(--banner-pagin-actv-bg);
+  }
+}

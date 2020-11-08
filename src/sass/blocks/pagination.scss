@@ -23,6 +23,8 @@
 }
 
 .pagination__link {
+  @include transition;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,6 +38,17 @@
   border-radius: 50%;
 
   &:not([href]) {
+    color: var(--pagin-actv-text);
+
+    background-color: var(--pagin-actv-bg);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--pagin-hvr-bg);
+  }
+
+  &:active {
     color: var(--pagin-actv-text);
 
     background-color: var(--pagin-actv-bg);

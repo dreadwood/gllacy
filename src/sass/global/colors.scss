@@ -77,6 +77,12 @@
   --input--actv-border: 0 0 0 2px rgba(46, 136, 228, 0.52);
 
 
+  // banner
+  --banner-pagin-border: var(--color-white);
+  --banner-pagin-hvr-bg: rgba(255, 255, 255, 0.4);
+  --banner-pagin-actv-bg: var(--color-white);
+
+
   // product
   --prod-text: var(--color-white);
   --prod-price-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
@@ -113,6 +119,7 @@
   // pagination
   --pagin-actv-text: var(--color-text);
   --pagin-actv-bg: var(--color-white);
+  --pagin-hvr-bg: rgba(255, 255, 255, 0.2);
 
 
   // #323232 Цвет иконок (есть еще #343434) / текста
