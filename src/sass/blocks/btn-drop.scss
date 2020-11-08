@@ -1,11 +1,28 @@
 .btn-drop {
+  position: relative;
+
+  &--search .btn-drop__btn {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+  }
+
+  &--search .btn-drop__svg {
+    margin: 0;
+  }
 
 }
 
 .btn-drop__btn {
   @include transition;
 
-  padding: 8px 16px;
+  // display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  // padding: 8px 16px;
+  padding: 0 16px;
 
   font-weight: 500;
   color: var(--btn-drop-text);
@@ -21,9 +38,26 @@
 
     background-color: var(--btn-drop-hvr-bg);
   }
+
+  &:hover .btn-drop__svg,
+  &:focus .btn-drop__svg {
+    fill: var(--btn-drop-hvr-text);
+  }
+}
+
+.btn-drop__svg {
+  @include transition(fill);
+
+  margin-right: 8px;
+
+  fill: var(--btn-drop-text);
 }
 
 .btn-drop__dropdown {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 10px);
+
   padding: 20px 15px;
 
   background-color: var(--modal-bg);

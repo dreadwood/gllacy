@@ -4,10 +4,15 @@
 
 .header__wrapper {
   @extend %wrapper;
+
+  display: flex;
+  align-items: center;
 }
 
 .header__logo {
-
+  width: 154px;
+  height: 64px;
+  margin-right: 10px;
 }
 
 .header__menu {
@@ -15,7 +20,11 @@
 }
 
 .header__btn-dropdown {
+  margin-right: 10px;
 
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .header__search {

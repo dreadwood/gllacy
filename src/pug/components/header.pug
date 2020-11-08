@@ -1,21 +1,28 @@
+include ./images
+
 header.header
   div.header__wrapper
     a.header__logo(href='#')
-      img
+      img(src='img/logo-gllacy.svg', width='154', height='64' alt='Логотип магазина Gllacy')
 
     nav.header__menu
       include ./menu-top
 
-    div.header__btn-dropdown.btn-drop
-      button.btn-drop__btn(type='button') Поиск
+    div.header__btn-dropdown.btn-drop.btn-drop--search
+      button.btn-drop__btn(type='button', aria-label='Поиск')
+        +svg('btn-drop__svg', 'icon-search', '16', '16')
       div.btn-drop__dropdown
         form.header__search.search(action='')
           input.input(type='search' placeholder='Крем-брюле' aria-label='Search')
-    div.header__btn-dropdown.btn-drop
-      button.btn-drop__btn(type='button') Вход
+    div.header__btn-dropdown.btn-drop.btn-drop--login
+      button.btn-drop__btn(type='button')
+        +svg('btn-drop__svg', 'icon-login', '20', '19')
+        = 'Вход'
       div.btn-drop__dropdown
-    div.header__btn-dropdown.btn-drop
-      button.btn-drop__btn(type='button') Пусто
+    div.header__btn-dropdown.btn-drop.btn-drop--bag
+      button.btn-drop__btn(type='button')
+        +svg('btn-drop__svg', 'icon-bag', '21', '20')
+        = 'Пусто'
       div.btn-drop__dropdown
 
     div.header__contact

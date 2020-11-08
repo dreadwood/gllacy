@@ -9,6 +9,8 @@ $link-pdng-b: 7px;
 }
 
 .menu-top__dropdown {
+  position: relative;
+
   margin-right: 32px;
 }
 
@@ -63,6 +65,10 @@ $link-pdng-b: 7px;
 }
 
 .menu-top__dropdown-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+
   min-width: 143px;
   padding: 3px 0 5px 0;
 
