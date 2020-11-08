@@ -1,19 +1,21 @@
+include ./images
+
 -
   var socialLinks = [
     {
-      img: 'https://via.placeholder.com/32x32',
+      img: 'icon-fb',
       title: 'Страница в фейсбуке',
     },
     {
-      img: 'https://via.placeholder.com/32x32',
+      img: 'icon-vk',
       title: 'Группа в контакте',
     },
     {
-      img: 'https://via.placeholder.com/32x32',
+      img: 'icon-insta',
       title: 'Профиль в инстаграмме',
     },
     {
-      img: 'https://via.placeholder.com/32x32',
+      img: 'icon-twitter',
       title: 'Аккаунт в твиттере',
     },
   ]
@@ -22,5 +24,5 @@ ul.social-list
   each item in socialLinks
     li.social-list__item
       a.social-list__link(href='#')
-        img.social-list__img(src= item.img, alt='')
+        +svg('social-list__img', item.img, '32', '32')
         span.visually-hidden= item.title

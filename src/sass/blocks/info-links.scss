@@ -11,14 +11,31 @@
 }
 
 .info-links__link {
+  display: flex;
   padding-left: 22px;
 
   font-size: 13px;
   line-height: 18px;
 
   &--icon {
-    padding-left: 7px;
+    align-items: center;
+    padding-left: 0;
 
     font-weight: 700;
+  }
+
+  svg {
+    @include transition(fill);
+
+    margin-right: 7px;
+
+    fill: var(--lnk-text-color);
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      fill: var(--lnk-hvr-text-color);
+    }
   }
 }

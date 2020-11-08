@@ -14,18 +14,27 @@
 }
 
 .social-list__link {
+  @include transition(border-color);
+
   display: block;
 
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
 
-  background-color: var(--social-bg);
   border: 2px solid var(--social-border);
   border-radius: 50%;
 
+  svg {
+    @include transition(fill);
+
+    fill: var(--social-bg);
+  }
+
   &:hover,
   &:focus {
-    background-color: var(--social-hvr-bg);
+    svg {
+      fill: var(--social-hvr-bg);
+    }
   }
 
   &:active {

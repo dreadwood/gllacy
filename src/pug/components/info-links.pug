@@ -2,7 +2,7 @@
   var infoLinks = [
     {
       text: 'Для поставщиков',
-      icon: 'img/sprite.svg#icon-heart',
+      icon: 'icon-heart',
     },
     {
       text: 'О производстве',
@@ -22,8 +22,8 @@ ul.info-links
   each item in infoLinks
     li.info-links__item
       if item.icon
-        svg(width='15' height='13')
-          use(xlink:href= item.icon)
-        a.info-links__link.info-links__link--icon.link(href='#')= item.text
+        a.info-links__link.info-links__link--icon.link(href='#')
+          +svg(null, item.icon, '15', '13')
+          = item.text
       else
         a.info-links__link.link(href='#')= item.text
