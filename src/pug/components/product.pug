@@ -1,7 +1,9 @@
+include ./images
+
 mixin product(name, src, price, hit)
   div.product
     div.product__img-wrapper
-      img.product__img(src=src, width='267', height='267', alt=name)
+      +picture('product__img', src, '267', '267', name)
       if hit
         div.product__label.product__label--hit
       p.product__price #{price} ₽

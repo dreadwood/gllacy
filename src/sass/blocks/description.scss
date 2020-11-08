@@ -10,6 +10,7 @@
   padding: 24px 20px 3px 20px;
 
   background-color: var(--color-bg-brown);
+  background-image: url("../img/bg-waffle.jpg");
   border-radius: 16px;
 }
 
@@ -33,24 +34,28 @@
 .description__item {
   width: 48.9%;
   margin-bottom: 33px;
+  padding-top: 14px;
   padding-left: 55px;
 
   font-size: 16px;
   line-height: 22px;
 
-  &--technology {
+  background-repeat: no-repeat;
+  background-position: 0 0;
 
+  &--technology {
+    background-image: url("../img/icon-ice.svg");
   }
 
   &--partners {
-
+    background-image: url("../img/icon-cow.svg");
   }
 
   &--ingredients {
-
+    background-image: url("../img/icon-leaflet.svg");
   }
 
   &--delivery {
-
+    background-image: url("../img/icon-thermometer.svg");
   }
 }

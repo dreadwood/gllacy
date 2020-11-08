@@ -1,3 +1,9 @@
 @mixin transition($property: all) {
   transition: $property 0.3s ease-out;
 }
+
+@mixin retina {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @content;
+  }
+}

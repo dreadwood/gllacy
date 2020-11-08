@@ -34,9 +34,11 @@ $pdng-b: 21px;
   height: 61px;
   border-radius: 50%;
   background-color: var(--prod-label-bg);
+  background-repeat: no-repeat;
+  background-position: center;
 
   &--hit {
-
+    background-image: url("../img/icon-hit.svg");
   }
 }
 

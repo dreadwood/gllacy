@@ -1,11 +1,18 @@
 .news {
-  min-height: 220px;
+  height: 100%;
   padding: 23px 20px;
 
   color: var(--news-text);
 
   background-color: var(--news-bg);
+  background-image: url("../img/bg-strawberry@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 16px;
+
+  @include retina {
+    background-image: url("../img/bg-strawberry@2x.jpg");
+  }
 }
 
 .news__label {
@@ -22,6 +29,7 @@
 .news__title {
   @include transition(color);
 
+  display: block;
   width: 60%;
 
   font-size: 24px;

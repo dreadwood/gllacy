@@ -18,7 +18,25 @@
   padding: 16px 22px 22px 16px;
 
   background-color: var(--color-bg-blue);
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 16px;
+
+  &--raspberry {
+    background-image: url("../img/bg-raspberry@1x.jpg");
+
+    @include retina {
+      background-image: url("../img/bg-raspberry@2x.jpg");
+    }
+  }
+
+  &--choсolate {
+    background-image: url("../img/bg-choсolate@1x.jpg");
+
+    @include retina {
+      background-image: url("../img/bg-choсolate@2x.jpg");
+    }
+  }
 }
 
 .promo_title {

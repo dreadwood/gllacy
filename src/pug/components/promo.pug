@@ -1,11 +1,13 @@
 -
   var promo = [
     {
+      class: 'raspberry',
       title: 'Малинка даром!',
       text: 'При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.',
       textBtn: 'Хочу варенье!',
     },
     {
+      class: 'choсolate',
       title: 'Шоколадки даром!',
       text: 'При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.',
       textBtn: 'Хочу шоколадки!',
@@ -17,7 +19,7 @@ section.promo
     h2.visually-hidden Спецпредложение – промо
 
     each item in promo
-      div.promo__item
+      div(class=`promo__item promo__item--${item.class}`)
         h3.promo_title=item.title
         p.promo__description=item.text
         button.promo-btn.main-btn=item.textBtn
