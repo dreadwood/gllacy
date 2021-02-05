@@ -1,10 +1,12 @@
-// const autoprefixer = require('autoprefixer');
+const autoprefixer = require('autoprefixer');
+const concat = require('gulp-concat');
 const del = require('del');
 const gulp = require('gulp');
 const gulpWebp = require('gulp-webp');
 const imagemin = require('gulp-imagemin');
+const order = require('gulp-order');
 const plumber = require('gulp-plumber');
-// const postcss = require('gulp-postcss');
+const postcss = require('gulp-postcss');
 const pug = require('gulp-pug');
 const rename = require('gulp-rename');
 const sass = require('gulp-sass');
@@ -17,7 +19,7 @@ const style = () => {
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
-    // .pipe(postcss([autoprefixer({grid: true})]))
+    .pipe(postcss([autoprefixer()]))
     .pipe(gulp.dest('dist/css'))
     .pipe(sourcemap.write('.'))
     .pipe(gulp.dest('dist/css'))
@@ -50,9 +52,25 @@ const webp = () => {
 
 const sprite = () => {
   return gulp.src('src/img/icon-*.svg')
-  .pipe(svgstore({inlineSvg: true}))
-  .pipe(rename('sprite.svg'))
-  .pipe(gulp.dest('dist/img'));
+    .pipe(svgstore({inlineSvg: true}))
+    .pipe(rename('sprite.svg'))
+    .pipe(gulp.dest('dist/img'));
+}
+
+const jsVendor = () => {
+  return gulp.src('src/js/vendor/*.js')
+    .pipe(concat('vendor.js'))
+    .pipe(gulp.dest('dist/js'));
+};
+
+const jsScript = () => {
+  return gulp.src('src/js/modules/*.js')
+    .pipe(order([
+      'utils.js',
+      '*.js',
+    ]))
+    .pipe(concat('script.js'))
+    .pipe(gulp.dest('dist/js'));
 }
 
 const server = () => {
@@ -67,6 +85,7 @@ const server = () => {
   gulp.watch('src/**/*.pug', gulp.series(html, refresh));
   gulp.watch('src/sass/**/*.scss', gulp.series(style));
   gulp.watch('src/img/icon-*.svg', gulp.series(sprite, html, refresh));
+  gulp.watch('src/js/*/*.js', gulp.series(jsScript, jsVendor, refresh));
 }
 
 const refresh = (done) => {
@@ -96,6 +115,8 @@ const build = gulp.series(
   images,
   webp,
   sprite,
+  jsVendor,
+  jsScript,
   copy,
   style,
   html,

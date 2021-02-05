@@ -5,17 +5,23 @@
   "author": "dreadwood",
   "homepage": "https://github.com/dreadwood/1028327-gllacy-29#readme",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "sprite": "gulp sprite",
     "build": "gulp build",
-    "start": "gulp start"
+    "eslint": "eslint src/js/*",
+    "sprite": "gulp sprite",
+    "start": "gulp start",
+    "stylelint": "stylelint \"src/sass/**/*.scss\" --syntax scss",
+    "test": "npm run stylelint && npm run eslint"
   },
   "devDependencies": {
     "autoprefixer": "10.0.1",
     "browser-sync": "2.26.12",
     "del": "5.1.0",
+    "eslint": "7.19.0",
+    "eslint-config-htmlacademy": "2.1.0",
     "gulp": "4.0.2",
+    "gulp-concat": "2.6.1",
     "gulp-imagemin": "7.1.0",
+    "gulp-order": "1.2.0",
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "9.0.0",
     "gulp-pug": "4.0.1",
@@ -24,6 +30,9 @@
     "gulp-sourcemaps": "2.6.5",
     "gulp-svgstore": "7.0.1",
     "gulp-webp": "4.0.1",
-    "pug": "3.0.0"
+    "postcss": "8.2.4",
+    "pug": "3.0.0",
+    "stylelint": "13.9.0",
+    "stylelint-config-htmlacademy": "0.1.4"
   }
 }
