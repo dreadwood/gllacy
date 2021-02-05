@@ -1,5 +1,7 @@
-@mixin transition($property: all) {
-  transition: $property 0.3s ease-out;
+@mixin transition($args...) {
+  transition-property: $args;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
 }
 
 @mixin retina {

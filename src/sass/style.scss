@@ -1,5 +1,6 @@
 // vendor
 @import "vendor/visually-hidden";
+@import "vendor/nouislider"; // ошибка!
 
 // global
 @import "global/colors";
@@ -12,6 +13,7 @@
 
 // blocks
 @import "blocks/main-btn";
+@import "blocks/filters";
 @import "blocks/link";
 @import "blocks/input";
 @import "blocks/product";

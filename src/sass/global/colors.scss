@@ -129,6 +129,13 @@
   // #CACAC7 разделитель корзины
   // rgba(255, 255, 255, 0.2) беграунд фильтров
 
-  // фильтры (сортировка)
-  // фон                rgba(255, 255, 255, 0.2)
+  // filters (сортировка)
+  --bg-filters: rgba(255, 255, 255, 0.2);
+  --filters-btn-actv-shadow: inset 0px 2px 1px #696969;
+  --filters-icon-bg: rgba(255, 255, 255, 0.8);
+  --filters-icon-bg-dis: rgba(255, 255, 255, 0.4);
+  --filters-slider-bg: rgba(248, 247, 244, 0.5);
+  --filters-slider-value: #F8F7F4;
+  --filters-slider-thumb-center: #ABABAB;
+  --filters-slider-thumb-shadow:rgba(171, 171, 171, 0.3);
 }

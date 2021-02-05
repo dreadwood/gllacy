@@ -1,20 +1,24 @@
 -
   var sort = [
     {
-      value: 'по популярности',
+      name: 'по популярности',
       checked: true,
+      value: 'popularity',
     },
     {
-      value: 'сначала недорогие',
+      name: 'сначала недорогие',
       checked: false,
+      value: 'cheap',
     },
     {
-      value: 'сначала дорогие',
+      name: 'сначала дорогие',
       checked: false,
+      value: 'expensive',
     },
     {
-      value: 'по жирности',
+      name: 'по жирности',
       checked: false,
+      value: 'fat',
     },
   ]
 
@@ -69,30 +73,40 @@
     },
   ]
 
-form.filters(action='', method='get')
+form.filters(action='https://echo.htmlacademy.ru', method='get')
   div.filters__row
-    fieldset
-      legend Сортировка:
-      select(name='sort')
+    fieldset.filters__fieldset
+      legend.filters__title Сортировка:
+      select.filters__select(name='sort')
         each item in sort
-          option(selected=item.checked)= item.value
+          option(value=item.value, selected=item.checked)= item.name
 
-    fieldset
-      legend Цена: 100 ₽ – 500 ₽:
-      input(type='range', name='price', min='100', max='800', value='400')
-      label.visually-hidden Цена
+    fieldset.filters__fieldset
+      legend.filters__title.filters__title--price Цена: 100 ₽ – 500 ₽:
+      .filters__group
+        div(id='slider')
+        input.filters__price.filters__price--min(type='number', name='mix_price', min='50', max='700', value='100')
+        input.filters__price.filters__price--max(type='number', name='max_price', min='50', max='700', value='500')
 
-    fieldset
-      legend Жирность:
-      each item in fat
-        input.visually-hidden(id=`fat_${item.value}`, type='radio', name='fat', value=item.value, checked=item.checked)
-        label(for=`fat_${item.value}`)=item.label
+    fieldset.filters__fieldset
+      legend.filters__title Жирность:
+      .filters__group
+        each item in fat
+          input.filters__radio.visually-hidden(id=`fat_${item.value}`, type='radio', name='fat', value=item.value, checked=item.checked)
+          label.filters__label.filters__label--radio(for=`fat_${item.value}`)
+            +svg('filters__icon filters__icon--radio-on', 'icon-radio-actv', 24, 20)
+            +svg('filters__icon filters__icon--radio-off', 'icon-radio', 20, 20)
+            =item.label
 
   div.filters__row
-    fieldset
-      legend Наполнители::
-      each item in composition
-        input.visually-hidden(id=`composition_${item.value}`, type='checkbox', name='composition', value=item.value, checked=item.checked)
-        label(for=`composition_${item.value}`)=item.label
+    fieldset.filters__fieldset
+      legend.filters__title Наполнители:
+      .filters__group
+        each item in composition
+          input.filters__check.visually-hidden(id=`composition_${item.value}`, type='checkbox', name='composition', value=item.value, checked=item.checked)
+          label.filters__label.filters__label--check(for=`composition_${item.value}`)
+            +svg('filters__icon filters__icon--check-on', 'icon-checkbox-actv', 24, 20)
+            +svg('filters__icon filters__icon--check-off', 'icon-checkbox', 20, 20)
+            =item.label
 
-    button(type="submit") Применить
+    button.filters__btn(type="submit") Применить

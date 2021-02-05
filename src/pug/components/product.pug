@@ -1,7 +1,7 @@
 include ./images
 
 mixin product(name, src, price, hit)
-  div.product
+  div.product(tabindex='0')
     div.product__img-wrapper
       +picture('product__img', src, '267', '267', name)
       if hit
