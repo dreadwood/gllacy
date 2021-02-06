@@ -17,18 +17,13 @@ include ./images
   ]
 
 section.banner
-  div.banner__wrapper
-    h2.visually-hidden Спецпредложение – комбо
-
-    ul.banner__list
+  h2.visually-hidden Спецпредложение – комбо
+  .banner__wrapper.swiper-container
+    ul.banner__list.swiper-wrapper
       each item in iceCream
-        li.banner__item
+        li.banner__item.swiper-slide
           +picture('banner__item-img', item.src, '1200', '966', item.title)
           p.banner__item-name=item.title
+    .banner__controls.swiper-pagination
 
-    button.banner__btn-buy.main-btn.main-btn--big(type='button') Давайте оба!
-
-    div.banner__controls
-      button.banner__controls-btn.banner__controls-btn--actv(aria-label='Слайд 1')
-      button.banner__controls-btn(aria-label='Слайд 2')
-      button.banner__controls-btn(aria-label='Слайд 3')
+  button.banner__btn-buy.main-btn.main-btn--big(type='button') Давайте оба!

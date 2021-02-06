@@ -1,9 +1,11 @@
 .banner {
-
+  display: flex;
+  justify-content: center;
 }
 
 .banner__wrapper {
-  @extend %wrapper;
+  width: 100%;
+  height: 966px;
 }
 
 .banner__list {
@@ -11,10 +13,16 @@
 }
 
 .banner__item {
+  position: relative;
 
+  display: flex;
+  justify-content: center;
 }
 
 .banner__item-name {
+  position: absolute;
+  top: 398px;
+
   width: 700px;
   margin: 0;
   margin-bottom: 27px;
@@ -26,10 +34,18 @@
 }
 
 .banner__btn-buy {
-
+  position: absolute;
+  top: 544px;
+  z-index: 1;
 }
 
-.banner__controls {
+// increase the specificity of the selector
+.banner__wrapper > .banner__controls {
+  @extend %wrapper;
+
+  position: relative;
+  bottom: 400px;
+
   display: flex;
 }
 
