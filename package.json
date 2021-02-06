@@ -6,10 +6,10 @@
   "homepage": "https://github.com/dreadwood/1028327-gllacy-29#readme",
   "scripts": {
     "build": "gulp build",
-    "eslint": "eslint src/js/*",
+    "eslint": "eslint src/js/*/*.js --fix",
     "sprite": "gulp sprite",
     "start": "gulp start",
-    "stylelint": "stylelint \"src/sass/**/*.scss\" --syntax scss",
+    "stylelint": "stylelint \"src/sass/**/*.scss\" --syntax scss --fix",
     "test": "npm run stylelint && npm run eslint"
   },
   "devDependencies": {

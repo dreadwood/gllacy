@@ -49,7 +49,7 @@ $link-pdng-b: 7px;
     background-color: var(--menu-link-select-bg);
   }
 
-  &[href]:after {
+  &[href]::after {
     content: "";
 
     position: absolute;
@@ -60,7 +60,6 @@ $link-pdng-b: 7px;
     height: 1px;
 
     background-color: var(--menu-link-separator);
-
   }
 }
 

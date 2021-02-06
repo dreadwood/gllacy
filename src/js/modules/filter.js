@@ -17,7 +17,7 @@
     const inputMin = filter.querySelector('.filters__price--min');
     const inputMax = filter.querySelector('.filters__price--max');
 
-    noUiSlider.create(slider, {
+    noUiSlider.create(slider, { // eslint-disable-line no-undef
       start: [Number(inputMin.value), Number(inputMax.value)],
       connect: true,
       range: {
@@ -45,5 +45,5 @@
       }
       title.textContent = `Цена: ${values[0]} ₽ – ${values[1]} ₽:`;
     });
-  })
+  });
 })();

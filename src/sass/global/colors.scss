@@ -4,34 +4,34 @@
 
   --color-text: #323232;
 
-  --color-bg-green: #849D8F;
-  --color-bg-blue: #8996A6;
-  --color-bg-brown: #9D8B84;
+  --color-bg-green: #849d8f;
+  --color-bg-blue: #8996a6;
+  --color-bg-brown: #9d8b84;
 
 
   // main-button
   --btn-text-color: var(--color-white);
-  --btn-bg-gradient: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
-  --btn-shadow: 0px 2px 2px rgba(85, 8, 0, 0.54);
-  --btn-big-text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
-  --btn-big-bg-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
+  --btn-bg-gradient: linear-gradient(180deg, #f26843 0%, #e74a35 100%);
+  --btn-shadow: 0 2px 2px rgba(85, 8, 0, 0.54);
+  --btn-big-text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+  --btn-big-bg-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
 
   --btn-hvr-bg-gradient:
     linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
-    linear-gradient(180deg, #F26843 0%, #E74A35 100%);
-  --btn-hvr-bg-shadow: 0px 1px 2px #AC1000;
-  --btn-big-hvr-bg-shadow: 0px 2px 2px #AC1000;
+    linear-gradient(180deg, #f26843 0%, #e74a35 100%);
+  --btn-hvr-bg-shadow: 0 1px 2px #ac1000;
+  --btn-big-hvr-bg-shadow: 0 2px 2px #ac1000;
 
   --btn-actv-bg-gradient:
     linear-gradient(0deg, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)),
-    linear-gradient(180deg, #F26843 0%, #E74A35 100%);
-  --btn-actv-bg-shadow: inset 0px 2px 2px #942718;
+    linear-gradient(180deg, #f26843 0%, #e74a35 100%);
+  --btn-actv-bg-shadow: inset 0 2px 2px #942718;
 
 
   // links
   --lnk-text-color: var(--color-white);
   --lnk-separator: rgba(255, 255, 255, 0.2);
-  --lnk-hvr-text-color: #FFBC9E;
+  --lnk-hvr-text-color: #ffbc9e;
   --lnk-hvr-separator: rgba(255, 188, 158, 0.3);
 
   // фон подч           rgba(50, 50, 50, 0.3)
@@ -44,18 +44,18 @@
   --menu-link-text: var(--color-white);
   --menu-link-hvr-text: var(--color-text);
   --menu-link-hvr-bg: var(--color-white);
-  --menu-link-actv-bg: #EDEDED;
-  --menu-link-actv-shadow: inset 0px 2px 1px #696969;
-  --menu-link-select-bg: #D07058;
+  --menu-link-actv-bg: #ededed;
+  --menu-link-actv-shadow: inset 0 2px 1px #696969;
+  --menu-link-select-bg: #d07058;
   --menu-link-separator: rgba(255, 255, 255, 0.2);
 
   --menu-drp-bg: var(--color-white);
-  --menu-drp-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
+  --menu-drp-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
   --menu-drp-text: var(--color-text);
-  --menu-drp-hvr-bg: #FBDED7;
-  --menu-drp-actv-bg: #F6B5A5;
+  --menu-drp-hvr-bg: #fbded7;
+  --menu-drp-actv-bg: #f6b5a5;
   --menu-drp-select-text: var(--color-white);
-  --menu-drp-select-bg: #D07058;
+  --menu-drp-select-bg: #d07058;
   --menu-drp-separator: rgba(50, 50, 50, 0.2);
 
 
@@ -67,8 +67,8 @@
 
 
   // input & modal
-  --modal-bg: #F8F7F4;
-  --modal-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
+  --modal-bg: #f8f7f4;
+  --modal-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
   --input-text: var(--color-text);
   --input-ph-text: #999999;
   --input-bg: var(--color-white);
@@ -85,27 +85,27 @@
 
   // product
   --prod-text: var(--color-white);
-  --prod-price-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
+  --prod-price-shadow: 0 1px 3px rgba(49, 50, 53, 0.5);
   --prod-separator: rgba(255, 255, 255, 0.2);
   --prod-hvr-bg: rgba(255, 255, 255, 0.2);
-  --prod-hvr-bg-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2);
+  --prod-hvr-bg-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
   --prod-label-bg: var(--color-white);
 
 
   // news
   --news-text: var(--color-text);
-  --news-link-hvr: #E84D37;
+  --news-link-hvr: #e84d37;
   --news-bg: var(--color-white);
 
 
   // subscription
-  --subscription-text: #5A5A5A;
-  --subscription-bg: #F8F7F4;
+  --subscription-text: #5a5a5a;
+  --subscription-bg: #f8f7f4;
 
 
   // contact
   --contact-text: var(--color-text);
-  --contact-link-hvr: #E84D37;
+  --contact-link-hvr: #e84d37;
   --contact-bg: var(--color-white);
 
 
@@ -131,11 +131,11 @@
 
   // filters (сортировка)
   --bg-filters: rgba(255, 255, 255, 0.2);
-  --filters-btn-actv-shadow: inset 0px 2px 1px #696969;
+  --filters-btn-actv-shadow: inset 0 2px 1px #696969;
   --filters-icon-bg: rgba(255, 255, 255, 0.8);
   --filters-icon-bg-dis: rgba(255, 255, 255, 0.4);
   --filters-slider-bg: rgba(248, 247, 244, 0.5);
-  --filters-slider-value: #F8F7F4;
-  --filters-slider-thumb-center: #ABABAB;
-  --filters-slider-thumb-shadow:rgba(171, 171, 171, 0.3);
+  --filters-slider-value: #f8f7f4;
+  --filters-slider-thumb-center: #ababab;
+  --filters-slider-thumb-shadow: rgba(171, 171, 171, 0.3);
 }
