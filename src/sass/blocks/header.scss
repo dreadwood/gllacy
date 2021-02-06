@@ -1,22 +1,29 @@
 .header {
+  position: absolute;
+  z-index: 2;
+
   display: block;
+  width: 100%;
 }
 
 .header__wrapper {
   @extend %wrapper;
 
+  padding-top: 9px;
+
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 
 .header__logo {
   width: 154px;
   height: 64px;
-  margin-right: 10px;
+  margin-right: 11px;
 }
 
 .header__menu {
-
+  margin-right: auto;
 }
 
 .header__btn-dropdown {
@@ -32,6 +39,11 @@
 }
 
 .header__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+
   font-weight: 700;
   text-align: right;
 }
@@ -52,6 +64,8 @@
   font-style: 22px;
   line-height: 24px;
   color: var(--lnk-text-color);
+
+  outline: none;
 
   &:hover,
   &:focus {

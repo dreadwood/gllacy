@@ -74,7 +74,7 @@
   ]
 
 form.filters(action='https://echo.htmlacademy.ru', method='get')
-  div.filters__row
+  .filters__row
     fieldset.filters__fieldset
       legend.filters__title Сортировка:
       select.filters__select(name='sort')
@@ -98,7 +98,7 @@ form.filters(action='https://echo.htmlacademy.ru', method='get')
             +svg('filters__icon filters__icon--radio-off', 'icon-radio', 20, 20)
             =item.label
 
-  div.filters__row
+  .filters__row
     fieldset.filters__fieldset
       legend.filters__title Наполнители:
       .filters__group

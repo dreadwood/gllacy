@@ -1,7 +1,12 @@
-.input {
+.search {
+
+}
+
+.search__input {
   @include transition;
 
   width: 100%;
+  width: 311px;
   padding: 13px 14px;
 
   font-size: 14px;

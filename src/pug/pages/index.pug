@@ -1,11 +1,17 @@
 include ../components/head
+include ../components/images
+include ../components/menu-top
+include ../components/header
+
+-
+  var isCatalog = false
 
 doctype html
 html(lang= 'ru')
   +head('HTML Academy: Глейси')
 
-  body
-    include ../components/header
+  body.page-index
+    +header(isCatalog)
 
     main
       h1.visually-hidden Глэйси – магазин по продаже мороженного собственного производства

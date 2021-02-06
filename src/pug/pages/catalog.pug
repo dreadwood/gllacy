@@ -1,8 +1,13 @@
 include ../components/head
 include ../components/breadcrumbs
 include ../components/product
+include ../components/images
+include ../components/menu-top
+include ../components/header
 
 -
+  var isCatalog = true
+
   var breadcrumbs = ['Главная', 'Каталог', 'Сливочное']
 
   var iceCream = [
@@ -72,8 +77,8 @@ doctype html
 html(lang='ru')
   +head('HTML Academy: Глейси – Каталог')
 
-  body
-    include ../components/header
+  body.page-catalog
+    +header(isCatalog)
 
     main
       div.catalog__wrapper

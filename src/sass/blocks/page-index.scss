@@ -1,0 +1,31 @@
+.page-index {
+  @include transition(background-color);
+
+  &--bg-blue {
+    background-color: var(--color-bg-blue);
+  }
+
+  &--bg-brown {
+    background-color: var(--color-bg-brown);
+  }
+
+  .promo {
+    position: relative;
+    z-index: 1;
+
+    margin-top: -320px;
+    margin-bottom: 40px;
+  }
+
+  .popular-goods {
+    margin-bottom: 40px;
+  }
+
+  .description {
+    margin-bottom: 40px;
+  }
+
+  .articles {
+    margin-bottom: 40px;
+  }
+}

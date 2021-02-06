@@ -1,5 +1,5 @@
 .map {
-
+  background-color: var(--color-bg-brown);
 }
 
 .map__wrapper {
@@ -7,4 +7,6 @@
 
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  height: 430px; // delete
 }
