@@ -25,19 +25,9 @@
     });
 
     swiper.on('activeIndexChange', (swiperObj) => {
-      switch (swiperObj.activeIndex) {
-        case 2:
-          document.body.classList.remove('page-index--bg-brown');
-          document.body.classList.add('page-index--bg-blue');
-          break;
-        case 3:
-          document.body.classList.remove('page-index--bg-blue');
-          document.body.classList.add('page-index--bg-brown');
-          break;
-        default:
-          document.body.classList.remove('page-index--bg-blue');
-          document.body.classList.remove('page-index--bg-brown');
-      }
+      const index = swiperObj.activeIndex;
+      const slide = swiperObj.slides[index];
+      document.body.style.backgroundColor = slide.dataset.bgColor;
     });
   });
 })();

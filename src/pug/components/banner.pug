@@ -5,14 +5,17 @@ include ./images
     {
       src: 'img/banner-img-green@1x.png',
       title: 'Крем-брюле и пломбир с малиновым джемом',
+      background: '#849d8f',
     },
     {
       src: 'img/banner-img-blue@1x.png',
       title: 'Шоколадный пломбир и лимонный сорбет',
+      background: '#8996a6',
     },
     {
       src: 'img/banner-img-brown@1x.png',
       title: 'Пломбир с помадкой и клубничный щербет',
+      background: '#9d8b84',
     },
   ]
 
@@ -21,7 +24,7 @@ section.banner
   .banner__wrapper.swiper-container
     ul.banner__list.swiper-wrapper
       each item in iceCream
-        li.banner__item.swiper-slide
+        li.banner__item.swiper-slide(data-bg-color=item.background)
           +picture('banner__item-img', item.src, '1200', '966', item.title)
           p.banner__item-name=item.title
     .banner__controls.swiper-pagination

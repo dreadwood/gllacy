@@ -1,14 +1,6 @@
 .page-index {
   @include transition(background-color);
 
-  &--bg-blue {
-    background-color: var(--color-bg-blue);
-  }
-
-  &--bg-brown {
-    background-color: var(--color-bg-brown);
-  }
-
   .promo {
     position: relative;
     z-index: 1;
