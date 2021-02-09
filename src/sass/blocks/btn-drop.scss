@@ -11,6 +11,28 @@
     margin: 0;
   }
 
+  &--search .btn-drop__dropdown {
+    width: 341px;
+  }
+
+  &--login .btn-drop__dropdown {
+    width: 277px;
+  }
+
+  &--bag .btn-drop__dropdown {
+    width: 539px;
+  }
+
+  &--bag-full .btn-drop__btn {
+    color: var(--btn-drop-hvr-text);
+
+    background-color: var(--btn-drop-hvr-bg);
+  }
+
+  &--bag-full .btn-drop__svg {
+    fill: var(--btn-drop-hvr-text);
+  }
+
   &:hover .btn-drop__dropdown,
   &:focus-within .btn-drop__dropdown,
   &:focus .btn-drop__dropdown {

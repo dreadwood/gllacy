@@ -1,0 +1,79 @@
+.login {
+  display: grid;
+  grid-template-columns: 1fr 120px;
+}
+
+.login__element {
+  margin-bottom: 20px;
+}
+
+.login__controls {
+  display: flex;
+}
+
+.login__input {
+  grid-column: 1 / 3;
+  margin-bottom: 20px;
+}
+
+.login__btn {
+  justify-self: start;
+  min-width: 103px;
+  margin-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.login__link-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.login__link {
+  @include transition(color);
+
+  position: relative;
+
+  display: block;
+  grid-column: 2 / 3;
+
+  font-size: 13px;
+  line-height: 20px;
+  color: var(--color-text);
+
+  outline: none;
+
+  &::after {
+    @include transition(background-color);
+
+    content: "";
+
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: rgba(50, 50, 50, 0.3);
+  }
+
+  &:focus,
+  &:hover {
+    color: var(--news-link-hvr);
+
+    &::after {
+      background-color: var(--news-link-hvr);
+    }
+  }
+
+  &--pass {
+    grid-row: -2 / -3;
+  }
+
+  &--reg {
+    grid-row: -1 / -2;
+  }
+}

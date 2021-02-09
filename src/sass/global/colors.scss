@@ -121,12 +121,12 @@
   --pagin-actv-bg: var(--color-white);
   --pagin-hvr-bg: rgba(255, 255, 255, 0.2);
 
-
+  // bag
   // #323232 Цвет иконок (есть еще #343434) / текста
-  // #E84D37 фон иконок
+  --bag-prod-del: #e84d37;
   // #2C2829 цвет иконок (крестик)
-  // #ABABAB серый цвет текста
-  // #CACAC7 разделитель корзины
+  --bag-prod-cost: #ababab;
+  --bag-list-border: #cAcac7;
   // rgba(255, 255, 255, 0.2) беграунд фильтров
 
   // filters (сортировка)

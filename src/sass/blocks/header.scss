@@ -26,16 +26,16 @@
   margin-right: auto;
 }
 
-.header__btn-dropdown {
+.header__btn-list {
+  display: flex;
+}
+
+.header__btn {
   margin-right: 10px;
 
   &:last-child {
     margin-right: 0;
   }
-}
-
-.header__search {
-
 }
 
 .header__contact {

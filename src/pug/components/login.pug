@@ -1,0 +1,8 @@
+mixin login()
+  form.login(action='https://echo.htmlacademy.ru', method='get')
+    input.login__input.input(type='email', name='email', placeholder='email@example.com' aria-label='Search')
+    input.login__input.input(type='password', name='search', placeholder='......' aria-label='Search')
+    button.login__btn.main-btn(type="submit") Войти
+    .login__link-list
+      a.login__link.login__link--pass(href="#") Забыли пароль?
+      a.login__link.login__link--reg(href="#") Новая регистрация

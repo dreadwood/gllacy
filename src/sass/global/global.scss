@@ -32,14 +32,9 @@ a {
 }
 
 button {
-  // font-family: inherit;
-  // font-size: inherit;
-  // line-height: inherit;
-  // font-weight: inherit;
-  // font-style: inherit;
-  // text-align: inherit;
-  // color: inherit;
-  // text-decoration: inherit;
-
   cursor: pointer;
+}
+
+picture {
+  flex-shrink: 0;
 }

@@ -7,22 +7,33 @@ mixin header(isCatalog)
       nav.header__menu
         +menuTop(isCatalog)
 
-      .header__btn-dropdown.btn-drop.btn-drop--search
-        button.btn-drop__btn(type='button', aria-label='Поиск')
-          +svg('btn-drop__svg', 'icon-search', '16', '16')
-        .btn-drop__dropdown
-          form.header__search.search(action='https://echo.htmlacademy.ru', method='get')
-            input.input(type='search', name='search', placeholder='Крем-брюле' aria-label='Search')
-      .header__btn-dropdown.btn-drop.btn-drop--login
-        button.btn-drop__btn(type='button')
-          +svg('btn-drop__svg', 'icon-login', '20', '19')
-          = 'Вход'
-        .btn-drop__dropdown
-      .header__btn-dropdown.btn-drop.btn-drop--bag
-        button.btn-drop__btn(type='button')
-          +svg('btn-drop__svg', 'icon-bag', '21', '20')
-          = 'Пусто'
-        .btn-drop__dropdown
+      .header__btn-list
+        .header__btn
+          .btn-drop.btn-drop--search
+            button.btn-drop__btn(type='button', aria-label='Поиск')
+              +svg('btn-drop__svg', 'icon-search', '16', '16')
+            .btn-drop__dropdown
+              +search()
+
+        .header__btn
+          .btn-drop.btn-drop--login
+            button.btn-drop__btn(type='button')
+              +svg('btn-drop__svg', 'icon-login', '20', '19')
+              = 'Вход'
+            .btn-drop__dropdown
+              +login()
+
+        .header__btn
+          .btn-drop.btn-drop--bag(class=(isCatalog ? 'btn-drop--bag-full' : null))
+            button.btn-drop__btn(type='button')
+              if isCatalog
+                +svg('btn-drop__svg', 'icon-bag-full', '21', '20')
+              else
+                +svg('btn-drop__svg', 'icon-bag', '21', '20')
+              = 'Пусто'
+            if isCatalog
+              .btn-drop__dropdown
+                +bag()
 
       .header__contact
         p.header__contact-working-hours с 10 до 20, ежедневно
