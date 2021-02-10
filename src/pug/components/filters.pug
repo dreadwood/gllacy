@@ -81,7 +81,7 @@ form.filters(action='https://echo.htmlacademy.ru', method='get')
         each item in sort
           option(value=item.value, selected=item.checked)= item.name
 
-    fieldset.filters__fieldset
+    fieldset.filters__fieldset.filters__fieldset--price
       legend.filters__title.filters__title--price Цена: 100 ₽ – 500 ₽:
       .filters__group
         div(id='slider')
