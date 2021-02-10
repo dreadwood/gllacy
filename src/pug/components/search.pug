@@ -1,3 +1,4 @@
 mixin search()
   form.search(action='https://echo.htmlacademy.ru', method='get')
-    input.input(type='search', name='search', placeholder='Крем-брюле' aria-label='Search')
+    label.visually-hidden(for='search_value') Поиск по сайту
+    input.input(type='search', name='search_value', placeholder='Крем-брюле', required)

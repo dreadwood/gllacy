@@ -84,21 +84,23 @@ html(lang='ru')
     +header(isCatalog)
 
     main
-      div.catalog__wrapper
-        div.catalog__breadcrumbs
-          +breadcrumbs(breadcrumbs)
+      section.catalog
+        h1.visually-hidden Страница с товарами
+        div.catalog__wrapper
+          div.catalog__breadcrumbs
+            +breadcrumbs(breadcrumbs)
 
-        h1.catalog__title Сливочное мороженое
+          h2.catalog__title Сливочное мороженое
 
-        div.catalog__filters
-          include ../components/filters
+          div.catalog__filters
+            include ../components/filters
 
-        div.catalog__grid
-          each item in iceCream
-            +product(item.name, item.img, item.price)
+          div.catalog__grid
+            each item in iceCream
+              +product(item.name, item.img, item.price)
 
-        div.catalog__pagination
-          include ../components/pagination
+          div.catalog__pagination
+            include ../components/pagination
 
     include ../components/footer
     script(src='js/vendor.js')

@@ -1,21 +1,20 @@
 .info-links {
   @extend %reset-list;
 
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: max-content max-content;
 }
 
 .info-links__item {
-  width: 50%;
+
 }
 
 .info-links__link {
   display: flex;
-  padding-left: 22px;
+  padding-left: 33px;
 
   font-size: 13px;
-  line-height: 18px;
+  line-height: 22px;
 
   &--icon {
     align-items: center;
@@ -28,6 +27,7 @@
     @include transition(fill);
 
     margin-right: 7px;
+    margin-left: 9px;
 
     fill: var(--lnk-text-color);
   }

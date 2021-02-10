@@ -55,12 +55,10 @@
 .btn-drop__btn {
   @include transition;
 
-  // display: block;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 32px;
-  // padding: 8px 16px;
   padding: 0 16px;
 
   font-weight: 500;

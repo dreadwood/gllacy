@@ -1,7 +1,7 @@
 article.subscription
   div.subscription__wrapper
     p.subscription__text Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)
-    form(action='')
-      input.subscription__input.input(id='subscription_email', type='email', name='email', placeholder='email@example.com' required)
-      label.visually-hidden(for='subscription_email') Почта
+    form.subscription__form(action='https://echo.htmlacademy.ru', method='get')
+      label.visually-hidden(for='sub_email') Почта
+      input.subscription__input.input(id='sub_email', type='email', name='sub_email', placeholder='email@example.com' required)
       button.subscription__btn.main-btn(type='submit') Отправить

@@ -10,7 +10,7 @@
 
 .subscription__wrapper {
   height: 100%;
-  padding: 23px 20px;
+  padding: 23px 20px 35px 20px;
 
   background-color: var(--subscription-bg);
   border-radius: 16px;
@@ -18,12 +18,18 @@
 
 .subscription__text {
   margin: 0;
+  margin-bottom: 42px;
+}
+
+.subscription__form {
+  display: flex;
+  align-items: center;
 }
 
 .subscription__input {
-
+  margin-right: 10px;
 }
 
 .subscription__btn {
-
+  padding: 10px 19px;
 }
