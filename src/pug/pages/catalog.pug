@@ -11,7 +11,20 @@ include ../components/search
 -
   var isCatalog = true
 
-  var breadcrumbs = ['Главная', 'Каталог', 'Сливочное']
+  var breadcrumbs = [
+    {
+      name: 'Главная',
+      url: 'index.html',
+    },
+    {
+      name: 'Каталог',
+      url: '#',
+    },
+    {
+      name: 'Сливочное',
+      url: null,
+    },
+  ]
 
   var iceCream = [
     {
@@ -86,20 +99,20 @@ html(lang='ru')
     main
       section.catalog
         h1.visually-hidden Страница с товарами
-        div.catalog__wrapper
-          div.catalog__breadcrumbs
+        .catalog__wrapper
+          .catalog__breadcrumbs
             +breadcrumbs(breadcrumbs)
 
           h2.catalog__title Сливочное мороженое
 
-          div.catalog__filters
+          .catalog__filters
             include ../components/filters
 
-          div.catalog__grid
+          .catalog__grid
             each item in iceCream
               +product(item.name, item.img, item.price)
 
-          div.catalog__pagination
+          .catalog__pagination
             include ../components/pagination
 
     include ../components/footer

@@ -1,18 +1,37 @@
 .catalog {
-  padding-top: 100px;
+  padding-top: 98px;
 }
 
 .catalog__wrapper {
   @extend %wrapper;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+    left: $container-padding;
+
+    display: block;
+    width: calc(100% - 2 * #{$container-padding});
+    height: 1px;
+
+    background-color: var(--menu-link-separator);
+  }
 }
 
 .catalog__breadcrumbs {
-  margin-bottom: 8px;
+  margin-bottom: 3px;
 }
 
 .catalog__title {
   margin: 0;
-  margin-bottom: 29px;
+  margin-bottom: 26px;
 
   font-size: 35px;
   line-height: 41px;
@@ -20,16 +39,21 @@
 }
 
 .catalog__filters {
-
+  width: 886px;
+  margin-right: -8px;
+  margin-bottom: 27px;
+  margin-left: -8px;
 }
 
 .catalog__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-row-gap: 40px;
+  grid-row-gap: 22px;
   justify-items: center;
+  margin-bottom: 65px;
 }
 
 .catalog__pagination {
-
+  align-self: flex-end;
+  margin-bottom: 30px;
 }

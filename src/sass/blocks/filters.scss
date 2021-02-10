@@ -25,6 +25,7 @@
 .filters__title {
   margin: 0;
   margin-bottom: 7px;
+  margin-left: 14px;
 
   font-size: 14px;
   line-height: 16px;
@@ -33,6 +34,7 @@
 
 .filters__group {
   display: flex;
+  justify-content: space-between;
   padding: 0 16px;
 
   background-color: var(--bg-filters);
@@ -232,6 +234,7 @@
   @include transition(color, background-color);
 
   display: block;
+  flex-grow: 2;
   margin-right: 8px;
   margin-bottom: 14px;
   margin-left: 8px;

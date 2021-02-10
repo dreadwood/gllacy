@@ -9,18 +9,31 @@ $pdng-b: 21px;
   display: block;
   width: 267px;
 
+  outline: none;
+
   &:hover .product__hvr-wrapper,
+  &:focus-within .product__hvr-wrapper,
   &:focus .product__hvr-wrapper {
     display: flex;
+  }
+
+  &:hover,
+  &:focus-within,
+  &:focus {
+    z-index: 5;
   }
 }
 
 .product__img-wrapper {
   position: relative;
+
+  width: 267px;
+  height: 267px;
+  margin-bottom: 13px;
 }
 
 .product__img {
-  margin-bottom: 13px;
+  width: 100%;
 
   border-radius: 50%;
 }
@@ -91,6 +104,11 @@ $pdng-b: 21px;
   background-color: var(--prod-hvr-bg);
   border-radius: 4px;
   box-shadow: var(--prod-hvr-bg-shadow);
+
+  &:hover,
+  &:focus {
+    display: flex;
+  }
 }
 
 .product__btn {

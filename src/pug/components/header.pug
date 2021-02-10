@@ -28,9 +28,10 @@ mixin header(isCatalog)
             button.btn-drop__btn(type='button')
               if isCatalog
                 +svg('btn-drop__svg', 'icon-bag-full', '21', '20')
+                = '2 товара'
               else
                 +svg('btn-drop__svg', 'icon-bag', '21', '20')
-              = 'Пусто'
+                  = 'Пусто'
             if isCatalog
               .btn-drop__dropdown
                 +bag()
