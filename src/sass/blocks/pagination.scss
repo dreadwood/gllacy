@@ -11,7 +11,7 @@
   &--prev .pagination__nav-icon {
     margin-right: 10px;
 
-    transform: scaleX(-1)
+    transform: scaleX(-1);
   }
 
   &--next {
@@ -23,8 +23,17 @@
   }
 
 
-  &[href]:hover .pagination__nav-icon,
-  &[href]:focus .pagination__nav-icon {
+  &[href]:hover,
+  &[href]:focus {
+    background-color: var(--pagin-hvr-bg);
+    border-radius: 50%;
+  }
+
+  &[href]:active {
+    background-color: var(--pagin-actv-bg);
+  }
+
+  &[href]:active .pagination__nav-icon {
     fill: var(--pagin-actv-text);
   }
 }
