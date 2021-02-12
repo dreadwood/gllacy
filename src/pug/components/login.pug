@@ -1,10 +1,10 @@
 mixin login()
   form.login(action='https://echo.htmlacademy.ru', method='get')
-    label.visually-hidden(for='login_email') Логин
+    label.visually-hidden(for='login_email') Электронная почта
     input.login__input.input(id='login_email', type='email', name='login_email', placeholder='email@example.com', required)
     label.visually-hidden(for='login_pass') Пароль
     input.login__input.input(id='login_pass', type='password', name='login_pass', placeholder='......', required)
-    button.login__btn.main-btn(type="submit") Войти
+    button.login__btn.main-btn(type='submit') Войти
     .login__link-list
       a.login__link.login__link--pass(href="#") Забыли пароль?
       a.login__link.login__link--reg(href="#") Новая регистрация

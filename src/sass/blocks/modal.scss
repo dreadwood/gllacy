@@ -1,0 +1,103 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  display: none;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+
+  background-color: rgba(0, 0, 0, 0.3);
+  overflow: auto;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+
+  &--show {
+    display: flex;
+  }
+}
+
+.modal__window {
+  position: relative;
+
+  width: 447px;
+  padding: 20px 24px 27px 24px;
+  margin-bottom: auto;
+
+  background-color: #F8F7F4;
+  border-radius: 6px;
+}
+
+.modal__close {
+  position: absolute;
+  top: 15px;
+  right: 16px;
+
+  width: 18px;
+  height: 17px;
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  &:hover .modal__close-icon,
+  &:focus .modal__close-icon {
+    fill: var(--news-link-hvr);
+  }
+}
+
+.modal__close-icon {
+  @include transition(fill);
+
+  fill: var(--color-text);
+}
+
+.modal__title {
+  margin: 0;
+  margin-bottom: 26px;
+
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.modal__form {
+  display: grid;
+}
+
+.modal__input {
+  margin-bottom: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.modal__textarea {
+  height: 154px;
+  margin-bottom: 25px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  font-size: 16px;
+  line-height: 20px;
+
+  &::placeholder  {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.modal__submit {
+  justify-self: end;
+  min-width: 140px;
+}

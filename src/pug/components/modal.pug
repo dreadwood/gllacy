@@ -1,0 +1,14 @@
+mixin modal()
+  section.modal.modal--feedback
+    .modal__window
+      button.modal__close(type='button', aria-label='Закрыть')
+        +svg('modal__close-icon', 'icon-modal-cross', 18, 17)
+      h2.modal__title Мы обязательно вам ответим!
+      form.modal__form(action='https://echo.htmlacademy.ru', method='get')
+        label.visually-hidden(for='feedback_name') Имя и фамилия
+        input.modal__input.input(id='feedback_name', type='text', name='feedback_name', placeholder='Имя Фамилия')
+        label.visually-hidden(for='feedback_email') Электронная почта
+        input.modal__input.input(id='feedback_email', type='email', name='feedback_email', placeholder='email@example.com', required)
+        label.visually-hidden(for='feedback_message') Сообщение, в свободной форме
+        textarea.modal__textarea.textarea(id='feedback_message', name="feedback_message", placeholder='В свободной форме', required)
+        button.modal__submit.main-btn(type='submit') Отправить
