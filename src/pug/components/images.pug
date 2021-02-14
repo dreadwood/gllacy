@@ -11,6 +11,10 @@ mixin picture(className, image, width, height, altText)
       height=height,
       alt=altText)
 
-mixin svg(className, name, width, height)
-  svg(class=(className ? className : null), width=width, height=height )
-    use(xlink:href=`img/sprite.svg#${name}`)
+mixin svg(className, name, width, height, altText)
+  if altText
+    svg(class=(className ? className : null), width=width, height=height, role='img', aria-label=altText)
+      use(xlink:href=`img/sprite.svg#${name}`)
+  else
+    svg(class=(className ? className : null), width=width, height=height, focusable='false', aria-hidden='true')
+      use(xlink:href=`img/sprite.svg#${name}`)
