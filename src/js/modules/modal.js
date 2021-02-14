@@ -13,6 +13,7 @@
     modal.classList.remove('modal--show');
     window.removeEventListener('keydown', escKeydownHandler);
     document.body.classList.remove('stop-scroll');
+    focusLock.off(modal); // eslint-disable-line no-undef
   };
 
   const escKeydownHandler = (evt) => {
@@ -26,6 +27,7 @@
     modal.classList.add('modal--show');
     window.addEventListener('keydown', escKeydownHandler);
     document.body.classList.add('stop-scroll');
+    focusLock.on(modal); // eslint-disable-line no-undef
   };
 
   const modalBtnCloseClickHandler = () => {
