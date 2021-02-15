@@ -1,5 +1,5 @@
 mixin login()
-  form.login(action='https://echo.htmlacademy.ru', method='get')
+  form.login(action='https://echo.htmlacademy.ru', method='post')
     label.visually-hidden(for='login_email') Электронная почта
     input.login__input.input(id='login_email', type='email', name='login_email', placeholder='email@example.com', required)
     label.visually-hidden(for='login_pass') Пароль

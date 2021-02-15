@@ -22,6 +22,17 @@
   width: 154px;
   height: 64px;
   margin-right: 11px;
+
+  &[href]:hover .header__logo-icon,
+  &[href]:focus .header__logo-icon {
+    fill: var(--lnk-hvr-text-color);
+  }
+}
+
+.header__logo-icon {
+  @include transition(fill);
+
+  fill: var(--color-white);
 }
 
 .header__menu {
@@ -44,6 +55,7 @@
   position: absolute;
   right: $container-padding;
   top: calc(100% + 2px);
+  z-index: -1;
 
   display: flex;
   flex-direction: column;

@@ -24,7 +24,7 @@ section.banner
   .banner__wrapper.swiper-container
     ul.banner__list.swiper-wrapper
       each item in iceCream
-        li.banner__item.swiper-slide(data-bg-color=item.background)
+        li.banner__item.swiper-slide(data-bg-color=item.background, data-product=item.title)
           +picture('banner__item-img', item.src, '1200', '966', item.title)
           p.banner__item-name=item.title
     .banner__controls.swiper-pagination

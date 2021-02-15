@@ -12,17 +12,16 @@ include ./images
     },
     {
       img: 'icon-insta',
-      title: 'Профиль в инстаграмме',
+      title: 'Профиль в инстаграме',
     },
     {
       img: 'icon-twitter',
-      title: 'Аккаунт в твиттере',
+      title: 'Аккаунт в твитере',
     },
   ]
 
 ul.social-list
   each item in socialLinks
     li.social-list__item
-      a.social-list__link(href='#')
+      a.social-list__link(href='#', target='_blank', aria-label=item.title)
         +svg('social-list__img', item.img, '32', '32')
-        span.visually-hidden= item.title

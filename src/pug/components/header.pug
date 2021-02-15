@@ -2,7 +2,7 @@ mixin header(isCatalog)
   header.header
     .header__wrapper
       a.header__logo(href=(isCatalog ? 'index.html' : null))
-        img(src='img/logo-gllacy.svg', width='154', height='64' alt='Логотип магазина Gllacy')
+        +svg('header__logo-icon', 'icon-logo-gllacy', 154, 64, 'Логотип магазина Gllacy')
 
       nav.header__menu
         +menuTop(isCatalog)
@@ -25,11 +25,12 @@ mixin header(isCatalog)
 
         .header__btn
           .btn-drop.btn-drop--bag(class=(isCatalog ? 'btn-drop--bag-full' : null))
-            button.btn-drop__btn(type='button')
-              if isCatalog
+            if isCatalog
+              button.btn-drop__btn(type='button')
                 +svg('btn-drop__svg', 'icon-bag-full', '21', '20')
                 = '2 товара'
-              else
+            else
+              button.btn-drop__btn(type='button', aria-label='Корзина пуста')
                 +svg('btn-drop__svg', 'icon-bag', '21', '20')
                   = 'Пусто'
             if isCatalog

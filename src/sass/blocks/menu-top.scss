@@ -71,6 +71,7 @@ $link-pdng-b: 7px;
 
   &:not([href]) {
     background-color: var(--menu-link-select-bg);
+    cursor: default;
   }
 
   &[href]::after {
@@ -136,6 +137,7 @@ $link-pdng-b: 7px;
     color: var(--menu-drp-select-text);
 
     background-color: var(--menu-drp-select-bg);
+    cursor: default;
   }
 
   &--mark {
