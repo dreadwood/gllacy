@@ -1,16 +1,17 @@
-.pagination
-  a.pagination__nav.pagination__nav--prev
-    +svg('pagination__nav-icon', 'icon-pag-arrow', 7, 12)
-  ul.pagination__list
-    li.pagination__item
-      a.pagination__link 1
-    li.pagination__item
-      a.pagination__link(href='#', aria-label='Страница 2') 2
-    li.pagination__item
-      a.pagination__link(href='#', aria-label='Страница 3') 3
-    li.pagination__item
-      a.pagination__link(href='#', aria-label='Страница 4') 4
-    li.pagination__item
-      a.pagination__link(href='#', aria-label='Страница 5') 5
-  a.pagination__nav.pagination__nav--next(href='#', aria-label='Следующая страница')
-    +svg('pagination__nav-icon', 'icon-pag-arrow', 7, 12)
+mixin pagination()
+  .pagination
+    a.pagination__nav.pagination__nav--prev
+      +svg('pagination__nav-icon', 'icon-pag-arrow', 7, 12)
+    ul.pagination__list
+      li.pagination__item
+        a.pagination__link 1
+      li.pagination__item
+        a.pagination__link(href='#', aria-label='Страница 2') 2
+      li.pagination__item
+        a.pagination__link(href='#', aria-label='Страница 3') 3
+      li.pagination__item
+        a.pagination__link(href='#', aria-label='Страница 4') 4
+      li.pagination__item
+        a.pagination__link(href='#', aria-label='Страница 5') 5
+    a.pagination__nav.pagination__nav--next(href='#', aria-label='Следующая страница')
+      +svg('pagination__nav-icon', 'icon-pag-arrow', 7, 12)

@@ -1,25 +1,10 @@
--
-  var promo = [
-    {
-      class: 'raspberry',
-      title: 'Малинка даром!',
-      text: 'При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.',
-      textBtn: 'Хочу варенье!',
-    },
-    {
-      class: 'choсolate',
-      title: 'Шоколадки даром!',
-      text: 'При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.',
-      textBtn: 'Хочу шоколадки!',
-    },
-  ]
+mixin promo(promo)
+  section.promo
+    .promo__wrapper
+      h2.visually-hidden Спецпредложение – промо
 
-section.promo
-  .promo__wrapper
-    h2.visually-hidden Спецпредложение – промо
-
-    each item in promo
-      div(class=`promo__item promo__item--${item.class}`)
-        h3.promo_title=item.title
-        p.promo__description=item.text
-        a.promo-btn.main-btn(href='#')=item.textBtn
+      each item in promo
+        div(class=`promo__item promo__item--${item.class}`)
+          h3.promo_title= item.title
+          p.promo__description= item.text
+          a.promo-btn.main-btn(href='#')= item.textBtn

@@ -1,15 +1,38 @@
-include ../components/head
-include ../components/breadcrumbs
-include ../components/product
-include ../components/images
-include ../components/menu-top
-include ../components/header
 include ../components/bag
+include ../components/breadcrumbs
+include ../components/copyright
+include ../components/footer
+include ../components/filters
+include ../components/head
+include ../components/header
+include ../components/images
+include ../components/info-links
 include ../components/login
+include ../components/menu-top
+include ../components/pagination
+include ../components/product
 include ../components/search
+include ../components/social-list
 
 -
   var isCatalog = true
+
+  var title = 'HTML Academy: Глейси – Каталог'
+
+  var goodsInBag = [
+    {
+      name: 'Пломбир с апельсиновым джемом',
+      weight: 1.5,
+      price: 200,
+      img: 'img/ice-сream-01@1x.jpg',
+    },
+    {
+      name: 'Клубничный пломбир с присыпкой из белого шоколада',
+      weight: 1.5,
+      price: 300,
+      img: 'img/ice-сream-03@1x.jpg',
+    },
+  ]
 
   var breadcrumbs = [
     {
@@ -89,12 +112,124 @@ include ../components/search
     },
   ]
 
+  var filters = {
+    sort: [
+      {
+        name: 'по популярности',
+        checked: true,
+        value: 'popularity',
+      },
+      {
+        name: 'сначала недорогие',
+        checked: false,
+        value: 'cheap',
+      },
+      {
+        name: 'сначала дорогие',
+        checked: false,
+        value: 'expensive',
+      },
+      {
+        name: 'по жирности',
+        checked: false,
+        value: 'fat',
+      },
+    ],
+    fat: [
+      {
+        value: '0',
+        label: '0%',
+        checked: false,
+      },
+      {
+        value: '10',
+        label: 'до 10%',
+        checked: true,
+      },
+      {
+        value: '30',
+        label: 'до 30%',
+        checked: false,
+      },
+      {
+        value: 'more_30',
+        label: 'выше 30%',
+        checked: false,
+      },
+    ],
+    composition: [
+      {
+        value: 'chocolate',
+        label: 'шоколадные',
+        checked: true,
+      },
+      {
+        value: 'sugar',
+        label: 'сахарные присыпки',
+        checked: true,
+      },
+      {
+        value: 'fruit',
+        label: 'фрукты',
+        checked: false,
+      },
+      {
+        value: 'syrup',
+        label: 'сиропы',
+        checked: false,
+      },
+      {
+        value: 'jam',
+        label: 'джемы',
+        checked: false,
+      },
+    ],
+  }
+
+  var infoLinks = [
+    {
+      text: 'Для поставщиков',
+      icon: 'icon-heart',
+    },
+    {
+      text: 'Наши документы',
+      icon: false,
+    },
+    {
+      text: 'О производстве',
+      icon: false,
+    },
+    {
+      text: 'Экологические стандарты',
+      icon: false,
+    },
+  ]
+
+  var socialLinks = [
+    {
+      img: 'icon-fb',
+      title: 'Страница в фейсбуке',
+    },
+    {
+      img: 'icon-vk',
+      title: 'Группа в контакте',
+    },
+    {
+      img: 'icon-insta',
+      title: 'Профиль в инстаграме',
+    },
+    {
+      img: 'icon-twitter',
+      title: 'Аккаунт в твитере',
+    },
+  ]
+
 doctype html
 html(lang='ru')
-  +head('HTML Academy: Глейси – Каталог')
+  +head(title)
 
   body.page-catalog
-    +header(isCatalog)
+    +header(isCatalog, goodsInBag)
 
     main
       section.catalog
@@ -106,15 +241,15 @@ html(lang='ru')
           h2.catalog__title Сливочное мороженое
 
           .catalog__filters
-            include ../components/filters
+            +filters(filters)
 
           .catalog__grid
             each item in iceCream
               +product(item.name, item.img, item.price)
 
           .catalog__pagination
-            include ../components/pagination
+            +pagination()
 
-    include ../components/footer
+    +footer()
     script(src='js/vendor.js')
     script(src='js/script.js')

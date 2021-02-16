@@ -1,38 +1,9 @@
-include ./product
+mixin popular-goods(iceCreamHit)
+  section.popular-goods
+    .popular-goods__wrapper
+      h2.visually-hidden Популярные товары
 
--
-  var iceCream = [
-    {
-      img: 'img/ice-сream-01@1x.jpg',
-      name: 'Сливочное с апельсиновым джемом и цитрусовой стружкой',
-      price: 310,
-      hit: true,
-    },
-    {
-      img: 'img/ice-сream-02@1x.jpg',
-      name: 'Сливочно-кофейное с кусочками шоколада',
-      price: 380,
-      hit: true,
-    },
-    {
-      img: 'img/ice-сream-03@1x.jpg',
-      name: 'Сливочно-клубничное с присыпкой из белого шоколада',
-      price: 355,
-      hit: true,
-    },
-    {
-      img: 'img/ice-сream-04@1x.jpg',
-      name: 'Сливочное крем-брюле с карамельной подливкой',
-      price: 415,
-      hit: true,
-    },
-  ]
-
-section.popular-goods
-  .popular-goods__wrapper
-    h2.visually-hidden Популярные товары
-
-    ul.popular-goods__list
-      each item in iceCream
-        li.popular-goods__item
-          +product(item.name, item.img, item.price, item.hit)
+      ul.popular-goods__list
+        each item in iceCreamHit
+          li.popular-goods__item
+            +product(item.name, item.img, item.price, item.hit)

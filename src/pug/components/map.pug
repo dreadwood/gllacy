@@ -1,6 +1,6 @@
-include ./contact
-
-section.map
-  .map__yandex
-  .map__wrapper
-    +contact()(class='map__contact')
+mixin map()
+  section.map
+    .map__yandex
+    .map__wrapper
+      .map__contact
+        +contact()

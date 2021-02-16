@@ -1,32 +1,12 @@
-include ./images
+mixin banner(iceCreamPromo)
+  section.banner
+    h2.visually-hidden Спецпредложение – комбо
+    .banner__wrapper.swiper-container
+      ul.banner__list.swiper-wrapper
+        each item in iceCreamPromo
+          li.banner__item.swiper-slide(data-bg-color=item.background, data-product=item.title)
+            +picture('banner__item-img', item.src, '1200', '966', item.title)
+            p.banner__item-name=item.title
+      .banner__controls.swiper-pagination
 
--
-  var iceCream = [
-    {
-      src: 'img/banner-img-green@1x.png',
-      title: 'Крем-брюле и пломбир с малиновым джемом',
-      background: '#849d8f',
-    },
-    {
-      src: 'img/banner-img-blue@1x.png',
-      title: 'Шоколадный пломбир и лимонный сорбет',
-      background: '#8996a6',
-    },
-    {
-      src: 'img/banner-img-brown@1x.png',
-      title: 'Пломбир с помадкой и клубничный щербет',
-      background: '#9d8b84',
-    },
-  ]
-
-section.banner
-  h2.visually-hidden Спецпредложение – комбо
-  .banner__wrapper.swiper-container
-    ul.banner__list.swiper-wrapper
-      each item in iceCream
-        li.banner__item.swiper-slide(data-bg-color=item.background, data-product=item.title)
-          +picture('banner__item-img', item.src, '1200', '966', item.title)
-          p.banner__item-name=item.title
-    .banner__controls.swiper-pagination
-
-  button.banner__btn-buy.main-btn.main-btn--big(type='button') Давайте оба!
+    button.banner__btn-buy.main-btn.main-btn--big(type='button') Давайте оба!

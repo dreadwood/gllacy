@@ -1,13 +1,11 @@
-include ./images
-
 mixin product(name, src, price, hit)
-  div.product(tabindex='0')
-    div.product__img-wrapper
+  .product(tabindex='0')
+    .product__img-wrapper
       +picture('product__img', src, '267', '267', name)
       if hit
-        div.product__label.product__label--hit
+        .product__label.product__label--hit
       p.product__price #{price} ₽
         span.product__units=' /кг'
-    h3.product__title=name
-    div.product__hvr-wrapper
+    h3.product__title= name
+    .product__hvr-wrapper
       a.product__btn.main-btn(href='#') Быстрый просмотр

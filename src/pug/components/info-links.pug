@@ -1,29 +1,10 @@
--
-  var infoLinks = [
-    {
-      text: 'Для поставщиков',
-      icon: 'icon-heart',
-    },
-    {
-      text: 'Наши документы',
-      icon: false,
-    },
-    {
-      text: 'О производстве',
-      icon: false,
-    },
-    {
-      text: 'Экологические стандарты',
-      icon: false,
-    },
-  ]
-
-ul.info-links
-  each item in infoLinks
-    li.info-links__item
-      if item.icon
-        a.info-links__link.info-links__link--icon.link(href='#')
-          +svg(null, item.icon, '15', '13')
-          = item.text
-      else
-        a.info-links__link.link(href='#')= item.text
+mixin info-links(infoLinks)
+  ul.info-links
+    each item in infoLinks
+      li.info-links__item
+        if item.icon
+          a.info-links__link.info-links__link--icon.link(href='#')
+            +svg(null, item.icon, '15', '13')
+            = item.text
+        else
+          a.info-links__link.link(href='#')= item.text

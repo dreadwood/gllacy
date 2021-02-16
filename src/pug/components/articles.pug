@@ -1,9 +1,10 @@
-section.articles
-  .articles__wrapper
-    h2.visually-hidden Полезные статьи
+mixin articles()
+  section.articles
+    .articles__wrapper
+      h2.visually-hidden Полезные статьи
 
-    .articles__item
-      include ./news
+      .articles__item
+        +news()
 
-    .articles__item
-      include ./subscription
+      .articles__item
+        +subscription()

@@ -1,20 +1,4 @@
--
-  var goods = [
-    {
-      name: 'Пломбир с апельсиновым джемом',
-      weight: 1.5,
-      price: 200,
-      img: 'img/ice-сream-01@1x.jpg',
-    },
-    {
-      name: 'Клубничный пломбир с присыпкой из белого шоколада',
-      weight: 1.5,
-      price: 300,
-      img: 'img/ice-сream-03@1x.jpg',
-    },
-  ]
-
-mixin bag()
+mixin bag(goods)
   .bag
     .bag__list
       each item in goods
@@ -22,7 +6,7 @@ mixin bag()
           button.bag__prod-del(type='button', aria-label='Удалить товар')
             +svg('bag__prod-del-icon', 'icon-cross', 11, 11)
           +picture('bag__prod-img', item.img, 33, 33)
-          span.bag__prod-name=item.name
+          span.bag__prod-name= item.name
           span.bag__prod-weight #{String(item.weight).replace(/\./, ',')} кг х
           span.bag__prod-price #{item.price} руб.
           span.bag__prod-cost #{item.price * item.weight} руб.

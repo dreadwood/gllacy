@@ -1,11 +1,12 @@
-footer.footer
-  .footer__wrapper
+mixin footer()
+  footer.footer
+    .footer__wrapper
 
-    .footer__social
-      include ./social-list
+      .footer__social
+        +social-list(socialLinks)
 
-    .footer__info
-      include ./info-links
+      .footer__info
+        +info-links(infoLinks)
 
-    .footer__copyright
-      include ./copyright
+      .footer__copyright
+        +copyright()

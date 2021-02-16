@@ -1,27 +1,6 @@
-include ./images
-
--
-  var socialLinks = [
-    {
-      img: 'icon-fb',
-      title: 'Страница в фейсбуке',
-    },
-    {
-      img: 'icon-vk',
-      title: 'Группа в контакте',
-    },
-    {
-      img: 'icon-insta',
-      title: 'Профиль в инстаграме',
-    },
-    {
-      img: 'icon-twitter',
-      title: 'Аккаунт в твитере',
-    },
-  ]
-
-ul.social-list
-  each item in socialLinks
-    li.social-list__item
-      a.social-list__link(href='#', target='_blank', aria-label=item.title)
-        +svg('social-list__img', item.img, '32', '32')
+mixin social-list(socialLinks)
+  ul.social-list
+    each item in socialLinks
+      li.social-list__item
+        a.social-list__link(href='#', target='_blank', aria-label=item.title)
+          +svg('social-list__img', item.img, '32', '32')

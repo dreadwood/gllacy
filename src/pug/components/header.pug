@@ -1,4 +1,4 @@
-mixin header(isCatalog)
+mixin header(isCatalog, goodsInBag)
   header.header
     .header__wrapper
       a.header__logo(href=(isCatalog ? 'index.html' : null))
@@ -35,7 +35,7 @@ mixin header(isCatalog)
                   = 'Пусто'
             if isCatalog
               .btn-drop__dropdown
-                +bag()
+                +bag(goodsInBag)
 
       .header__contact
         p.header__contact-working-hours с 10 до 20, ежедневно

@@ -1,32 +1,147 @@
-include ../components/head
-include ../components/images
-include ../components/menu-top
-include ../components/header
+include ../components/articles
 include ../components/bag
+include ../components/banner
+include ../components/contact
+include ../components/copyright
+include ../components/description
+include ../components/footer
+include ../components/head
+include ../components/header
+include ../components/images
+include ../components/info-links
 include ../components/login
-include ../components/search
+include ../components/map
+include ../components/menu-top
 include ../components/modal
+include ../components/news
+include ../components/popular-goods
+include ../components/product
+include ../components/promo
+include ../components/search
+include ../components/social-list
+include ../components/subscription
+
 
 -
   var isCatalog = false
 
+  var title = 'HTML Academy: Глейси'
+
+  var iceCreamHit = [
+    {
+      img: 'img/ice-сream-01@1x.jpg',
+      name: 'Сливочное с апельсиновым джемом и цитрусовой стружкой',
+      price: 310,
+      hit: true,
+    },
+    {
+      img: 'img/ice-сream-02@1x.jpg',
+      name: 'Сливочно-кофейное с кусочками шоколада',
+      price: 380,
+      hit: true,
+    },
+    {
+      img: 'img/ice-сream-03@1x.jpg',
+      name: 'Сливочно-клубничное с присыпкой из белого шоколада',
+      price: 355,
+      hit: true,
+    },
+    {
+      img: 'img/ice-сream-04@1x.jpg',
+      name: 'Сливочное крем-брюле с карамельной подливкой',
+      price: 415,
+      hit: true,
+    },
+  ]
+
+  var iceCreamPromo = [
+    {
+      src: 'img/banner-img-green@1x.png',
+      title: 'Крем-брюле и пломбир с малиновым джемом',
+      background: '#849d8f',
+    },
+    {
+      src: 'img/banner-img-blue@1x.png',
+      title: 'Шоколадный пломбир и лимонный сорбет',
+      background: '#8996a6',
+    },
+    {
+      src: 'img/banner-img-brown@1x.png',
+      title: 'Пломбир с помадкой и клубничный щербет',
+      background: '#9d8b84',
+    },
+  ]
+
+  var promo = [
+    {
+      class: 'raspberry',
+      title: 'Малинка даром!',
+      text: 'При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.',
+      textBtn: 'Хочу варенье!',
+    },
+    {
+      class: 'choсolate',
+      title: 'Шоколадки даром!',
+      text: 'При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.',
+      textBtn: 'Хочу шоколадки!',
+    },
+  ]
+
+  var infoLinks = [
+    {
+      text: 'Для поставщиков',
+      icon: 'icon-heart',
+    },
+    {
+      text: 'Наши документы',
+      icon: false,
+    },
+    {
+      text: 'О производстве',
+      icon: false,
+    },
+    {
+      text: 'Экологические стандарты',
+      icon: false,
+    },
+  ]
+
+  var socialLinks = [
+    {
+      img: 'icon-fb',
+      title: 'Страница в фейсбуке',
+    },
+    {
+      img: 'icon-vk',
+      title: 'Группа в контакте',
+    },
+    {
+      img: 'icon-insta',
+      title: 'Профиль в инстаграме',
+    },
+    {
+      img: 'icon-twitter',
+      title: 'Аккаунт в твитере',
+    },
+  ]
+
 doctype html
-html(lang= 'ru')
-  +head('HTML Academy: Глейси')
+html(lang='ru')
+  +head(title)
 
   body.page-index
     +header(isCatalog)
 
     main
       h1.visually-hidden Глэйси – магазин по продаже мороженного собственного производства
-      include ../components/banner
-      include ../components/promo
-      include ../components/popular-goods
-      include ../components/description
-      include ../components/articles
-      include ../components/map
+      +banner(iceCreamPromo)
+      +promo(promo)
+      +popular-goods(iceCreamHit)
+      +description()
+      +articles()
+      +map()
 
-    include ../components/footer
+    +footer()
     +modal()
     script(src="https://api-maps.yandex.ru/2.1/?apikey=478da3f8-2506-4828-bc38-ebdf6ad4395a&lang=ru_RU" type="text/javascript")
     script(src='js/vendor.js')
