@@ -29,13 +29,13 @@
     margin-right: 7px;
     margin-left: 9px;
 
-    fill: var(--lnk-text-color);
+    fill: var(--color-white);
   }
 
   &:hover,
   &:focus {
     svg {
-      fill: var(--lnk-hvr-text-color);
+      fill: var(--color-main-soft-lighten);
     }
   }
 }

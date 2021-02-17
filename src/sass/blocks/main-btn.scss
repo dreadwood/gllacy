@@ -12,21 +12,21 @@
   color: var(--color-white);
 
   background-color: transparent;
-  background-image: var(--btn-bg-gradient);
+  background-image: var(--gradient);
   border: none;
   border-radius: 70px;
-  box-shadow: var(--btn-shadow);
+  box-shadow: 0 2px 2px var(--color-red-darken-54a);
   outline: none;
 
   &:hover,
   &:focus {
-    background-image: var(--btn-hvr-bg-gradient);
-    box-shadow: var(--btn-hvr-bg-shadow);
+    background-image: var(--gradient-hvr);
+    box-shadow: 0 1px 2px var(--color-red-light);
   }
 
   &:active {
-    background-image: var(--btn-actv-bg-gradient);
-    box-shadow: var(--btn-actv-bg-shadow);
+    background-image: var(--gradient-actv);
+    box-shadow: inset 0 2px 2px  var(--color-red);
   }
 
   &--big {
@@ -35,18 +35,18 @@
     font-size: 32px;
     line-height: 44px;
     letter-spacing: 0.05em;
-    text-shadow: var(--btn-big-text-shadow);
+    text-shadow: 0 2px 5px var(--color-red-dark-76a);
 
     border-radius: 50px;
-    box-shadow: var(--btn-big-bg-shadow);
+    box-shadow: 0 2px 2px var(--color-red-light-64a);
 
     &:hover,
     &:focus {
-      box-shadow: var(--btn-big-hvr-bg-shadow);
+      box-shadow: 0 2px 2px var(--color-red-light);
     }
 
     &:active {
-      box-shadow: var(--btn-actv-bg-shadow);
+      box-shadow: inset 0 2px 2px  var(--color-red);
     }
   }
 }

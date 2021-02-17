@@ -24,13 +24,13 @@
   }
 
   &--bag-full .btn-drop__btn {
-    color: var(--btn-drop-hvr-text);
+    color: var(--color-dark);
 
-    background-color: var(--btn-drop-hvr-bg);
+    background-color: var(--color-white);
   }
 
   &--bag-full .btn-drop__svg {
-    fill: var(--btn-drop-hvr-text);
+    fill: var(--color-dark);
   }
 
   &:hover .btn-drop__dropdown,
@@ -62,23 +62,23 @@
   padding: 0 16px;
 
   font-weight: 500;
-  color: var(--btn-drop-text);
+  color: var(--color-white);
 
-  background-color: var(--btn-drop-bg);
+  background-color: var(--color-white-20a);
   border: none;
   border-radius: 20px;
   outline: none;
 
   &:hover,
   &:focus {
-    color: var(--btn-drop-hvr-text);
+    color: var(--color-dark);
 
-    background-color: var(--btn-drop-hvr-bg);
+    background-color: var(--color-white);
   }
 
   &:hover .btn-drop__svg,
   &:focus .btn-drop__svg {
-    fill: var(--btn-drop-hvr-text);
+    fill: var(--color-dark);
   }
 }
 
@@ -87,7 +87,7 @@
 
   margin-right: 8px;
 
-  fill: var(--btn-drop-text);
+  fill: var(--color-white);
 }
 
 .btn-drop__dropdown {
@@ -98,7 +98,7 @@
   display: none;
   padding: 20px 15px;
 
-  background-color: var(--modal-bg);
+  background-color: var(--color-light);
   border-radius: 4px;
-  box-shadow: var(--modal-shadow);
+  box-shadow: 0 20px 20px var(--color-black-40a);
 }

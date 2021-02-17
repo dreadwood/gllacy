@@ -59,7 +59,7 @@
   padding: 0;
 
   background-color: transparent;
-  border: 2px solid var(--banner-pagin-border);
+  border: 2px solid var(--color-white);
   border-radius: 50%;
   outline: none;
 
@@ -69,14 +69,14 @@
 
   &:not(.banner__controls-btn--actv):hover,
   &:not(.banner__controls-btn--actv):focus {
-    background-color: var(--banner-pagin-hvr-bg);
+    background-color: var(--color-white-40a);
   }
 
   &:not(.banner__controls-btn--actv):active {
-    background-color: var(--banner-pagin-actv-bg);
+    background-color: var(--color-white);
   }
 
   &--actv {
-    background-color: var(--banner-pagin-actv-bg);
+    background-color: var(--color-white);
   }
 }

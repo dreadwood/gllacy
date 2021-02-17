@@ -49,14 +49,14 @@
 
   &:hover .modal__close-icon,
   &:focus .modal__close-icon {
-    fill: var(--news-link-hvr);
+    fill: var(--color-main);
   }
 }
 
 .modal__close-icon {
   @include transition(fill);
 
-  fill: var(--color-text);
+  fill: var(--color-dark);
 }
 
 .modal__title {
@@ -66,7 +66,7 @@
   font-size: 24px;
   line-height: 28px;
   font-weight: 500;
-  color: var(--color-text);
+  color: var(--color-dark);
 }
 
 .modal__form {

@@ -21,24 +21,24 @@
   width: 36px;
   height: 36px;
 
-  border: 2px solid var(--social-border);
+  border: 2px solid var(--color-white-50a);
   border-radius: 50%;
 
   svg {
     @include transition(fill);
 
-    fill: var(--social-bg);
+    fill: var(--color-white-80a);
   }
 
   &:hover,
   &:focus {
     svg {
-      fill: var(--social-hvr-bg);
+      fill: var(--color-white);
     }
   }
 
   &:active {
-    border-color: var(--social-actv-border);
+    border-color: var(--color-white-70a);
   }
 }
 

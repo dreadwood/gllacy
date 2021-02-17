@@ -1,136 +1,53 @@
 :root {
   --color-white: #ffffff;
+  --color-white-20a: rgba(255, 255, 255, 0.2);
+  --color-white-40a: rgba(255, 255, 255, 0.4);
+  --color-white-50a: rgba(255, 255, 255, 0.5);
+  --color-white-70a: rgba(255, 255, 255, 0.7);
+  --color-white-80a: rgba(255, 255, 255, 0.8);
   --color-black: #000000;
+  --color-black-20a: rgba(0, 0, 0, 0.2);
+  --color-black-40a: rgba(0, 0, 0, 0.4);
 
-  --color-text: #323232;
+  --color-light: #f8f7f4;
+  --color-light-50a: rgba(248, 247, 244, 0.5);
+  --color-dark: #323232;
+  --color-dark-20a: rgba(50, 50, 50, 0.2);
+
+  --color-main: #e84d37;
+
+  --color-main-soft-lightest: #fbded7;
+  --color-main-soft-lighten: #ffbc9e;
+  --color-main-soft-lighten-30a: rgba(255, 188, 158, 0.3);
+  --color-main-soft-light: #f6b5a5;
+  --color-main-soft: #d07058;
 
   --color-bg-green: #849d8f;
   --color-bg-blue: #8996a6;
   --color-bg-brown: #9d8b84;
 
+  --color-blue-52a: rgba(46, 136, 228, 0.52);
+  --color-blue-dark-50a: rgba(49, 50, 53, 0.5);
 
-  // main-button
-  --btn-text-color: var(--color-white);
-  --btn-bg-gradient: linear-gradient(180deg, #f26843 0%, #e74a35 100%);
-  --btn-shadow: 0 2px 2px rgba(85, 8, 0, 0.54);
-  --btn-big-text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
-  --btn-big-bg-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+  --color-red-light: #ac1000;
+  --color-red-light-64a: rgba(172, 16, 0, 0.64);
+  --color-red: #942718;
+  --color-red-dark-76a: rgba(160, 32, 11, 0.76);
+  --color-red-darken-54a: rgba(85, 8, 0, 0.54);
 
-  --btn-hvr-bg-gradient:
+  --color-gray-lightest: #cacaca;
+  --color-gray-lighten: #ededed;
+  --color-gray-light-52a: rgba(178, 178, 178, 0.52);
+  --color-gray: #ababab;
+  --color-gray-dark: #999999;
+  --color-gray-darken: #696969;
+  --color-gray-darkest: #5a5a5a;
+
+  --gradient: linear-gradient(180deg, #f26843 0%, #e74a35 100%);
+  --gradient-hvr:
     linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
     linear-gradient(180deg, #f26843 0%, #e74a35 100%);
-  --btn-hvr-bg-shadow: 0 1px 2px #ac1000;
-  --btn-big-hvr-bg-shadow: 0 2px 2px #ac1000;
-
-  --btn-actv-bg-gradient:
+  --gradient-actv:
     linear-gradient(0deg, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)),
     linear-gradient(180deg, #f26843 0%, #e74a35 100%);
-  --btn-actv-bg-shadow: inset 0 2px 2px #942718;
-
-
-  // links
-  --lnk-text-color: var(--color-white);
-  --lnk-separator: rgba(255, 255, 255, 0.2);
-  --lnk-hvr-text-color: #ffbc9e;
-  --lnk-hvr-separator: rgba(255, 188, 158, 0.3);
-
-
-  // menu-top
-  --menu-link-text: var(--color-white);
-  --menu-link-hvr-text: var(--color-text);
-  --menu-link-hvr-bg: var(--color-white);
-  --menu-link-actv-bg: #ededed;
-  --menu-link-actv-shadow: inset 0 2px 1px #696969;
-  --menu-link-select-bg: #d07058;
-  --menu-link-separator: rgba(255, 255, 255, 0.2);
-
-  --menu-drp-bg: var(--color-white);
-  --menu-drp-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
-  --menu-drp-text: var(--color-text);
-  --menu-drp-hvr-bg: #fbded7;
-  --menu-drp-actv-bg: #f6b5a5;
-  --menu-drp-select-text: var(--color-white);
-  --menu-drp-select-bg: #d07058;
-  --menu-drp-separator: rgba(50, 50, 50, 0.2);
-
-
-  // btn-drop
-  --btn-drop-text: var(--color-white);
-  --btn-drop-bg: rgba(255, 255, 255, 0.2);
-  --btn-drop-hvr-text: var(--color-text);
-  --btn-drop-hvr-bg: var(--color-white);
-
-
-  // input & modal
-  --modal-bg: #f8f7f4;
-  --modal-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
-  --input-text: var(--color-text);
-  --input-ph-text: #999999;
-  --input-bg: var(--color-white);
-  --input-border: 0 0 0 1px rgba(178, 178, 178, 0.52);
-  --input--hvr-border: 0 0 0 2px rgba(178, 178, 178, 0.52);
-  --input--actv-border: 0 0 0 2px rgba(46, 136, 228, 0.52);
-
-
-  // banner
-  --banner-pagin-border: var(--color-white);
-  --banner-pagin-hvr-bg: rgba(255, 255, 255, 0.4);
-  --banner-pagin-actv-bg: var(--color-white);
-
-
-  // product
-  --prod-text: var(--color-white);
-  --prod-price-shadow: 0 1px 3px rgba(49, 50, 53, 0.5);
-  --prod-separator: rgba(255, 255, 255, 0.2);
-  --prod-hvr-bg: rgba(255, 255, 255, 0.2);
-  --prod-hvr-bg-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
-  --prod-label-bg: var(--color-white);
-
-
-  // news
-  --news-text: var(--color-text);
-  --news-link-hvr: #e84d37;
-  --news-bg: var(--color-white);
-
-
-  // subscription
-  --subscription-text: #5a5a5a;
-  --subscription-bg: #f8f7f4;
-
-
-  // contact
-  --contact-text: var(--color-text);
-  --contact-link-hvr: #e84d37;
-  --contact-bg: var(--color-white);
-
-
-  // social
-  --social-bg: rgba(255, 255, 255, 0.8);
-  --social-border: rgba(255, 255, 255, 0.5);
-  --social-hvr-bg: #ffffff;
-  --social-actv-border: rgba(255, 255, 255, 0.7);
-
-
-  // pagination
-  --pagin-actv-text: var(--color-text);
-  --pagin-actv-bg: var(--color-white);
-  --pagin-hvr-bg: rgba(255, 255, 255, 0.2);
-
-  // bag
-  // #323232 Цвет иконок (есть еще #343434) / текста
-  --bag-prod-del: #e84d37;
-  // #2C2829 цвет иконок (крестик)
-  --bag-prod-cost: #ababab;
-  --bag-list-border: #cacac7;
-  // rgba(255, 255, 255, 0.2) беграунд фильтров
-
-  // filters (сортировка)
-  --bg-filters: rgba(255, 255, 255, 0.2);
-  --filters-btn-actv-shadow: inset 0 2px 1px #696969;
-  --filters-icon-bg: rgba(255, 255, 255, 0.8);
-  --filters-icon-bg-dis: rgba(255, 255, 255, 0.4);
-  --filters-slider-bg: rgba(248, 247, 244, 0.5);
-  --filters-slider-value: #f8f7f4;
-  --filters-slider-thumb-center: #ababab;
-  --filters-slider-thumb-shadow: rgba(171, 171, 171, 0.3);
 }

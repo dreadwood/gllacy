@@ -25,7 +25,7 @@
 
   &[href]:hover .header__logo-icon,
   &[href]:focus .header__logo-icon {
-    fill: var(--lnk-hvr-text-color);
+    fill: var(--color-main-soft-lighten);
   }
 }
 
@@ -80,12 +80,12 @@
 
   font-size: 22px;
   line-height: 24px;
-  color: var(--lnk-text-color);
+  color: var(--color-white);
 
   outline: none;
 
   &:hover,
   &:focus {
-    color: var(--lnk-hvr-text-color);
+    color: var(--color-main-soft-lighten);
   }
 }

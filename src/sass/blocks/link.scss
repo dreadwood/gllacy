@@ -1,18 +1,18 @@
 .link {
   @include transition;
 
-  color: var(--lnk-text-color);
+  color: var(--color-white);
 
   &[href] {
     text-decoration: underline;
-    text-decoration-color: var(--lnk-separator);
+    text-decoration-color: var(--color-white-20a);
     text-underline-position: under;
   }
 
   &[href]:hover,
   &[href]:focus {
-    color: var(--lnk-hvr-text-color);
+    color: var(--color-main-soft-lighten);
 
-    text-decoration-color: var(--lnk-hvr-separator);
+    text-decoration-color: var(--color-main-soft-lighten-30a);
   }
 }

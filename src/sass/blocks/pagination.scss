@@ -25,23 +25,23 @@
 
   &[href]:hover,
   &[href]:focus {
-    background-color: var(--pagin-hvr-bg);
+    background-color: var(--color-white-20a);
     border-radius: 50%;
   }
 
   &[href]:active {
-    background-color: var(--pagin-actv-bg);
+    background-color: var(--color-white);
   }
 
   &[href]:active .pagination__nav-icon {
-    fill: var(--pagin-actv-text);
+    fill: var(--color-dark);
   }
 }
 
 .pagination__nav-icon {
   @include transition(fill);
 
-  fill: var(--lnk-separator);
+  fill: var(--color-white-20a);
 }
 
 .pagination__list {
@@ -74,20 +74,20 @@
   border-radius: 50%;
 
   &:not([href]) {
-    color: var(--pagin-actv-text);
+    color: var(--color-dark);
 
-    background-color: var(--pagin-actv-bg);
+    background-color: var(--color-white);
     cursor: default;
   }
 
   &[href]:hover,
   &[href]:focus {
-    background-color: var(--pagin-hvr-bg);
+    background-color: var(--color-white-20a);
   }
 
   &[href]:active {
-    color: var(--pagin-actv-text);
+    color: var(--color-dark);
 
-    background-color: var(--pagin-actv-bg);
+    background-color: var(--color-white);
   }
 }

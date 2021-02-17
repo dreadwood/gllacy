@@ -46,7 +46,7 @@ $pdng-b: 21px;
   width: 61px;
   height: 61px;
   border-radius: 50%;
-  background-color: var(--prod-label-bg);
+  background-color: var(--color-white);
   background-repeat: no-repeat;
   background-position: center;
 
@@ -65,7 +65,7 @@ $pdng-b: 21px;
   font-size: 45px;
   line-height: 45px;
   font-weight: 700;
-  text-shadow: var(--prod-price-shadow);
+  text-shadow: 0 1px 3px var(--color-blue-dark-50a);
 }
 
 .product__units {
@@ -81,9 +81,9 @@ $pdng-b: 21px;
   line-height: 22px;
   font-weight: 500;
   text-align: center;
-  color: var(--prod-text);
+  color: var(--color-white);
   text-decoration: underline;
-  text-decoration-color: var(--prod-separator);
+  text-decoration-color: var(--color-white-20a);
   text-underline-position: under;
 }
 
@@ -101,9 +101,9 @@ $pdng-b: 21px;
   width: calc(100% + #{$pdng-rl} * 2);
   padding: 11px $pdng-rl 21px $pdng-rl;
 
-  background-color: var(--prod-hvr-bg);
+  background-color: var(--color-white-20a);
   border-radius: 4px;
-  box-shadow: var(--prod-hvr-bg-shadow);
+  box-shadow: 0 20px 20px var(--color-black-20a);
 
   &:hover,
   &:focus {

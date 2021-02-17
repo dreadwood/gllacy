@@ -10,25 +10,25 @@
   font-size: 14px;
   line-height: 16px;
   font-weight: 700;
-  color: var(--input-text);
+  color: var(--color-dark);
 
-  background-color: var(--input-bg);
+  background-color: var(--color-white);
   border: none;
-  box-shadow: var(--input-border);
+  box-shadow: 0 0 0 1px var(--color-gray-light-52a);
   border-radius: 4px;
   outline: none;
   resize: none;
 
   &::placeholder {
     font-weight: 400;
-    color: var(--input-ph-text);
+    color: var(--color-gray-dark);
   }
 
   &:hover {
-    box-shadow: var(--input--hvr-border);
+    box-shadow: 0 0 0 2px var(--color-gray-light-52a);
   }
 
   &:focus {
-    box-shadow: var(--input--actv-border);
+    box-shadow: 0 0 0 2px var(--color-blue-52a);
   }
 }

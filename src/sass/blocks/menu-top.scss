@@ -47,7 +47,7 @@ $link-pdng-b: 7px;
   font-size: 16px;
   line-height: 18px;
   font-weight: 700;
-  color: var(--menu-link-text);
+  color: var(--color-white);
 
   border-radius: 26px;
   outline: none;
@@ -58,19 +58,19 @@ $link-pdng-b: 7px;
 
   &[href]:hover,
   &[href]:focus {
-    color: var(--menu-link-hvr-text);
+    color: var(--color-dark);
 
-    background-color: var(--menu-link-hvr-bg);
+    background-color: var(--color-white);
     border-radius: 26px;
   }
 
   &[href]:active {
-    background-color: var(--menu-link-actv-bg);
-    box-shadow: var(--menu-link-actv-shadow);
+    background-color: var(--color-gray-lighten);
+    box-shadow: inset 0 2px 1px var(--color-gray-darken);
   }
 
   &:not([href]) {
-    background-color: var(--menu-link-select-bg);
+    background-color: var(--color-main-soft);
     cursor: default;
   }
 
@@ -84,7 +84,7 @@ $link-pdng-b: 7px;
     width: calc(100% - #{$link-pdng-rl} * 2);
     height: 1px;
 
-    background-color: var(--menu-link-separator);
+    background-color: var(--color-white-20a);
   }
 }
 
@@ -98,9 +98,9 @@ $link-pdng-b: 7px;
   min-width: 143px;
   padding: 3px 0 5px 0;
 
-  background-color: var(--menu-drp-bg);
+  background-color: var(--color-white);
   border-radius: 4px;
-  box-shadow: var(--menu-drp-shadow);
+  box-shadow: 0 20px 20px var(--color-black-40a);
 
   &:hover,
   &:focus {
@@ -116,7 +116,7 @@ $link-pdng-b: 7px;
 
   font-size: 14px;
   line-height: 16px;
-  color: var(--menu-drp-text);
+  color: var(--color-dark);
 
   outline: none;
 
@@ -126,17 +126,17 @@ $link-pdng-b: 7px;
 
   &[href]:hover,
   &[href]:focus {
-    background-color: var(--menu-drp-hvr-bg);
+    background-color: var(--color-main-soft-lightest);
   }
 
   &[href]:active {
-    background-color: var(--menu-drp-actv-bg);
+    background-color: var(--color-main-soft-light);
   }
 
   &:not([href]) {
-    color: var(--menu-drp-select-text);
+    color: var(--color-white);
 
-    background-color: var(--menu-drp-select-bg);
+    background-color: var(--color-main-soft);
     cursor: default;
   }
 
@@ -160,7 +160,7 @@ $link-pdng-b: 7px;
       width: calc(100% - 15px);
       height: 1px;
 
-      background-color: var(--menu-drp-separator);
+      background-color: var(--color-dark-20a);
     }
   }
 }

@@ -41,7 +41,7 @@
 
   font-size: 13px;
   line-height: 20px;
-  color: var(--color-text);
+  color: var(--color-dark);
 
   outline: none;
 
@@ -62,10 +62,10 @@
 
   &:focus,
   &:hover {
-    color: var(--news-link-hvr);
+    color: var(--color-main);
 
     &::after {
-      background-color: var(--news-link-hvr);
+      background-color: var(--color-main);
     }
   }
 
