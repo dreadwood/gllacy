@@ -126,8 +126,8 @@ const copy = () => {
 
 const build = gulp.series(
   clean,
-  // images,
-  // webp,
+  images,
+  webp,
   sprite,
   jsVendor,
   jsScript,
