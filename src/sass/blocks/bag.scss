@@ -40,6 +40,10 @@
   &:focus .bag__prod-del-icon {
     fill: var(--color-main);
   }
+
+  &:focus-visible {
+    outline: 1px auto var(--color-outline);
+  }
 }
 
 .bag__prod-del-icon {

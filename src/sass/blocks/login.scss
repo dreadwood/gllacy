@@ -69,6 +69,10 @@
     }
   }
 
+  &:focus-visible {
+    outline: 1px auto var(--color-outline);
+  }
+
   &--pass {
     grid-row: -2 / -3;
   }

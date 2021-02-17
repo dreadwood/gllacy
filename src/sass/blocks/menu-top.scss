@@ -64,6 +64,10 @@ $link-pdng-b: 7px;
     border-radius: 26px;
   }
 
+  &:focus-visible {
+    outline: 1px auto var(--color-outline);
+  }
+
   &[href]:active {
     background-color: var(--color-gray-lighten);
     box-shadow: inset 0 2px 1px var(--color-gray-darken);
@@ -91,7 +95,6 @@ $link-pdng-b: 7px;
 .menu-top__dropdown-menu {
   position: absolute;
   top: calc(100% + 10px);
-  top: calc(100% + 0);
   left: 0;
 
   display: none;
@@ -127,6 +130,10 @@ $link-pdng-b: 7px;
   &[href]:hover,
   &[href]:focus {
     background-color: var(--color-main-soft-lightest);
+  }
+
+  &:focus-visible {
+    outline: 1px auto var(--color-outline);
   }
 
   &[href]:active {

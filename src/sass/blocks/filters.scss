@@ -127,6 +127,10 @@
     content: none;
   }
 
+  &:focus-visible {
+    outline: 1px auto var(--color-outline);
+  }
+
   &-lower {
     right: -19px;
   }
@@ -160,6 +164,10 @@
   &:disabled + .filters__label .filters__icon {
     fill: var(--color-white-40a);
   }
+
+  &:focus-visible + .filters__label {
+    outline: 1px auto var(--color-outline);
+  }
 }
 
 .filters__check {
@@ -173,6 +181,10 @@
 
   &:disabled + .filters__label .filters__icon {
     fill: var(--color-white-40a);
+  }
+
+  &:focus-visible + .filters__label {
+    outline: 1px auto var(--color-outline);
   }
 }
 
@@ -248,10 +260,6 @@
   border: 2px solid var(--color-white);
   border-radius: 20px;
 
-  &:hover {
-    outline: none;
-  }
-
   &:hover,
   &:focus {
     padding: 9px 16px;
@@ -260,6 +268,11 @@
 
     background-color: var(--color-white);
     border: none;
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 1px auto var(--color-outline);
   }
 
   &:active {

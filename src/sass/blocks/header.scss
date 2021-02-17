@@ -88,4 +88,8 @@
   &:focus {
     color: var(--color-main-soft-lighten);
   }
+
+  &:focus-visible {
+    outline: 1px auto var(--color-outline);
+  }
 }

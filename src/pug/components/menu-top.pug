@@ -1,7 +1,7 @@
 mixin menuTop(isCatalog)
   ul.menu-top
     li.menu-top__dropdown
-      a.menu-top__link(href=(isCatalog ?  null : 'catalog.html'))
+      a.menu-top__link(href=(isCatalog ?  null : 'catalog.html'), tabindex=(isCatalog ?  0 : null))
         = 'Каталог'
       .menu-top__dropdown-menu
         a.menu-top__dropdown-link.menu-top__dropdown-link--mark(href='catalog.html') Новинки

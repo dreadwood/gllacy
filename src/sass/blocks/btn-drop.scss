@@ -76,6 +76,10 @@
     background-color: var(--color-white);
   }
 
+  &:focus-visible {
+    outline: 1px auto var(--color-outline);
+  }
+
   &:hover .btn-drop__svg,
   &:focus .btn-drop__svg {
     fill: var(--color-dark);

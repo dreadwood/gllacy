@@ -63,6 +63,10 @@
   border-radius: 50%;
   outline: none;
 
+  &:focus-visible {
+    outline: 1px auto var(--color-outline);
+  }
+
   &:last-child {
     margin-right: 0;
   }

@@ -11,16 +11,20 @@ $pdng-b: 21px;
 
   outline: none;
 
+  &:hover,
+  &:focus-within,
+  &:focus {
+    z-index: 5;
+  }
+
   &:hover .product__hvr-wrapper,
   &:focus-within .product__hvr-wrapper,
   &:focus .product__hvr-wrapper {
     display: flex;
   }
 
-  &:hover,
-  &:focus-within,
-  &:focus {
-    z-index: 5;
+  &:focus-visible {
+    outline: 1px auto var(--color-outline);
   }
 }
 
