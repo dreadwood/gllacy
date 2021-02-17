@@ -10,6 +10,7 @@
     "sprite": "gulp sprite",
     "start": "gulp start",
     "stylelint": "stylelint \"src/sass/**/*.scss\" --syntax scss --fix",
+    "format": "stylelint \"src/sass/**/*.scss\" --formatter",
     "test": "npm run stylelint && npm run eslint"
   },
   "devDependencies": {
@@ -20,6 +21,7 @@
     "eslint-config-htmlacademy": "2.1.0",
     "gulp": "4.0.2",
     "gulp-concat": "2.6.1",
+    "gulp-csso": "4.0.1",
     "gulp-imagemin": "7.1.0",
     "gulp-order": "1.2.0",
     "gulp-plumber": "1.2.1",
@@ -29,10 +31,12 @@
     "gulp-sass": "4.1.0",
     "gulp-sourcemaps": "2.6.5",
     "gulp-svgstore": "7.0.1",
+    "gulp-uglify": "3.0.2",
     "gulp-webp": "4.0.1",
     "postcss": "8.2.4",
     "pug": "3.0.0",
     "stylelint": "13.9.0",
-    "stylelint-config-htmlacademy": "0.1.4"
+    "stylelint-config-htmlacademy": "0.1.4",
+    "stylelint-order": "4.1.0"
   }
 }

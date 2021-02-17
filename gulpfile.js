@@ -1,5 +1,6 @@
 const autoprefixer = require('autoprefixer');
 const concat = require('gulp-concat');
+const csso = require('gulp-csso');
 const del = require('del');
 const gulp = require('gulp');
 const gulpWebp = require('gulp-webp');
@@ -13,6 +14,7 @@ const sass = require('gulp-sass');
 const sourcemap = require('gulp-sourcemaps');
 const svgstore = require('gulp-svgstore')
 const sync = require('browser-sync').create();
+const uglify = require('gulp-uglify');
 
 const style = () => {
   return gulp.src('src/sass/style.scss')
@@ -21,6 +23,8 @@ const style = () => {
     .pipe(sass())
     .pipe(postcss([autoprefixer()]))
     .pipe(gulp.dest('dist/css'))
+    .pipe(csso())
+    .pipe(rename('style.min.css'))
     .pipe(sourcemap.write('.'))
     .pipe(gulp.dest('dist/css'))
     .pipe(sync.stream());
@@ -59,7 +63,12 @@ const sprite = () => {
 
 const jsVendor = () => {
   return gulp.src('src/js/vendor/*.js')
+    .pipe(sourcemap.init())
     .pipe(concat('vendor.js'))
+    .pipe(gulp.dest('dist/js'))
+    .pipe(uglify())
+    .pipe(rename("vendor.min.js"))
+    .pipe(sourcemap.write('.'))
     .pipe(gulp.dest('dist/js'));
 };
 
@@ -69,7 +78,12 @@ const jsScript = () => {
       'utils.js',
       '*.js',
     ]))
+    .pipe(sourcemap.init())
     .pipe(concat('script.js'))
+    .pipe(gulp.dest('dist/js'))
+    .pipe(uglify())
+    .pipe(rename("script.min.js"))
+    .pipe(sourcemap.write('.'))
     .pipe(gulp.dest('dist/js'));
 }
 
@@ -112,8 +126,8 @@ const copy = () => {
 
 const build = gulp.series(
   clean,
-  images,
-  webp,
+  // images,
+  // webp,
   sprite,
   jsVendor,
   jsScript,
