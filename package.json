@@ -1,16 +1,15 @@
 {
-  "name": "gllacy-29",
+  "name": "gllacy",
   "version": "1.0.0",
   "description": "Учебный проект HTML academy собранный с помощью pug (https://pugjs.org/api/getting-started.html)",
   "author": "dreadwood",
-  "homepage": "https://github.com/dreadwood/1028327-gllacy-29#readme",
+  "homepage": "https://github.com/dreadwood/gllacy#readme",
   "scripts": {
     "build": "gulp build",
-    "eslint": "eslint src/js/*/*.js --fix",
+    "eslint": "eslint src/js/*/*.js",
     "sprite": "gulp sprite",
     "start": "gulp start",
-    "stylelint": "stylelint \"src/sass/**/*.scss\" --syntax scss --fix",
-    "format": "stylelint \"src/sass/**/*.scss\" --formatter",
+    "stylelint": "stylelint \"src/sass/**/*.scss\" --syntax scss",
     "test": "npm run stylelint && npm run eslint"
   },
   "devDependencies": {
@@ -38,5 +37,9 @@
     "stylelint": "13.9.0",
     "stylelint-config-htmlacademy": "0.1.4",
     "stylelint-order": "4.1.0"
-  }
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead"
+  ]
 }
