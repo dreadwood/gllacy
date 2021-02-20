@@ -11,11 +11,10 @@
 
   position: relative;
 
-  padding-top: 9px;
-
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  padding-top: 9px;
 }
 
 .header__logo {
@@ -53,8 +52,8 @@
 
 .header__contact {
   position: absolute;
-  right: $container-padding;
   top: calc(100% + 2px);
+  right: $container-padding;
   z-index: -1;
 
   display: flex;

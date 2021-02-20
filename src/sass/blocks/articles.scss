@@ -1,13 +1,9 @@
-.articles {
-
-}
-
 .articles__wrapper {
   @extend %wrapper;
 
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .articles__item {

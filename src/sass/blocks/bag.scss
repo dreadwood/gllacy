@@ -64,8 +64,8 @@
 }
 
 .bag__prod-weight {
-  width: 60px;
   flex-shrink: 0;
+  width: 60px;
 
   text-align: right;
 
@@ -75,15 +75,15 @@
 }
 
 .bag__prod-price {
-  width: 70px;
   flex-shrink: 0;
+  width: 70px;
 
   color: var(--color-gray);
 }
 
 .bag__prod-cost {
-  width: 70px;
   flex-shrink: 0;
+  width: 70px;
 }
 
 .bag__cost {
@@ -92,8 +92,8 @@
   margin-bottom: 15px;
 
   font-size: 15px;
-  font-weight: 700;
   line-height: 16px;
+  font-weight: 700;
 }
 
 .bag__btn {

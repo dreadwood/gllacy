@@ -49,10 +49,11 @@ $pdng-b: 21px;
 
   width: 61px;
   height: 61px;
-  border-radius: 50%;
+
   background-color: var(--color-white);
   background-repeat: no-repeat;
   background-position: center;
+  border-radius: 50%;
 
   &--hit {
     background-image: url("../img/icon-hit.svg");
@@ -101,8 +102,8 @@ $pdng-b: 21px;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  height: calc(100% + #{$padg-t} + #{$pdng-b} + 48px + 13px);
   width: calc(100% + #{$pdng-rl} * 2);
+  height: calc(100% + #{$padg-t} + #{$pdng-b} + 48px + 13px);
   padding: 11px $pdng-rl 21px $pdng-rl;
 
   background-color: var(--color-white-20a);
@@ -113,8 +114,4 @@ $pdng-b: 21px;
   &:focus {
     display: flex;
   }
-}
-
-.product__btn {
-
 }
