@@ -8,6 +8,7 @@
     "build": "gulp build",
     "editorconfig": "editorconfig-checker",
     "eslint": "eslint src/js/*/*.js",
+    "gh-pages": "push-dir --dir=build --branch=gh-pages",
     "sprite": "gulp sprite",
     "start": "gulp start",
     "stylelint": "stylelint \"src/sass/**/*.scss\" --syntax scss",
@@ -36,6 +37,7 @@
     "gulp-webp": "4.0.1",
     "postcss": "8.2.4",
     "pug": "3.0.0",
+    "push-dir": "0.4.1",
     "stylelint": "13.9.0",
     "stylelint-config-htmlacademy": "0.1.4",
     "stylelint-order": "4.1.0"
