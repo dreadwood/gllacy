@@ -9,7 +9,7 @@ mixin picture(className, image, width, height, altText)
       srcset=`${path}@2x.${format} 2x`,
       width=width,
       height=height,
-      alt=altText)
+      alt=(altText ? altText : ''))
 
 mixin svg(className, name, width, height, altText)
   if altText

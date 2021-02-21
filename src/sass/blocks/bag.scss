@@ -47,7 +47,7 @@
 }
 
 .bag__prod-del-icon {
-  fill: del(--color-main);
+  fill: var(--color-main);
 }
 
 .bag__prod-img {

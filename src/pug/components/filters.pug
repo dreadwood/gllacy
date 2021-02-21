@@ -3,7 +3,8 @@ mixin filters(sort, fat, composition)
     .filters__row
       fieldset.filters__fieldset
         legend.filters__title Сортировка:
-        select.filters__select(name='filter_sort')
+        label.visually-hidden(for='sort') Выберите тип сортировки
+        select.filters__select(id='sort', name='filter_sort')
           each item in filters.sort
             option(value=item.value, selected=item.checked)= item.name
 
