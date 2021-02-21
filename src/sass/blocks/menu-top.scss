@@ -6,6 +6,8 @@ $link-pdng-b: 7px;
   @extend %reset-list;
 
   display: flex;
+  flex-wrap: wrap;
+  max-width: 600px;
 }
 
 .menu-top__dropdown {

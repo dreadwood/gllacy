@@ -2,11 +2,14 @@
   @extend %reset-list;
 
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 180px;
 }
 
 .social-list__item {
+  margin-top: 4px;
   margin-right: 8px;
+  margin-bottom: 4px;
 
   &:last-child {
     margin-right: 0;

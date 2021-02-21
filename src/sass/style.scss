@@ -12,6 +12,11 @@
 @import "global/box-sizing";
 @import "global/global";
 
+// common blocks
+@import "blocks/input";
+@import "blocks/link";
+@import "blocks/main-btn";
+
 // blocks
 @import "blocks/articles";
 @import "blocks/bag";
@@ -26,10 +31,7 @@
 @import "blocks/footer";
 @import "blocks/header";
 @import "blocks/info-links";
-@import "blocks/input";
-@import "blocks/link";
 @import "blocks/login";
-@import "blocks/main-btn";
 @import "blocks/map";
 @import "blocks/menu-top";
 @import "blocks/modal";
