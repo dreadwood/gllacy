@@ -6,16 +6,18 @@
   "homepage": "https://github.com/dreadwood/gllacy#readme",
   "scripts": {
     "build": "gulp build",
+    "editorconfig": "editorconfig-checker",
     "eslint": "eslint src/js/*/*.js",
     "sprite": "gulp sprite",
     "start": "gulp start",
     "stylelint": "stylelint \"src/sass/**/*.scss\" --syntax scss",
-    "test": "npm run stylelint && npm run eslint"
+    "test": "npm run editorconfig && npm run stylelint && npm run eslint"
   },
   "devDependencies": {
     "autoprefixer": "10.0.1",
     "browser-sync": "2.26.14",
     "del": "5.1.0",
+    "editorconfig-checker": "3.3.0",
     "eslint": "7.19.0",
     "eslint-config-htmlacademy": "2.1.0",
     "gulp": "4.0.2",

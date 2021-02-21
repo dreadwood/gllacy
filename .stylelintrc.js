@@ -22,8 +22,8 @@ module.exports = {
       ]
     }],
     'order/order': [
-			'custom-properties',
-			'declarations',
+      'custom-properties',
+      'declarations',
     ],
 
     'order/properties-order': [
@@ -273,6 +273,6 @@ module.exports = {
       'clip-rule',
       'stroke',
       'stroke-width',
-		],
+    ],
   },
 }
