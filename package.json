@@ -8,7 +8,7 @@
     "build": "gulp build",
     "editorconfig": "editorconfig-checker",
     "eslint": "eslint src/js/*/*.js",
-    "gh-pages": "push-dir --dir=build --branch=gh-pages",
+    "gh-pages": "push-dir --dir=dist --branch=gh-pages",
     "sprite": "gulp sprite",
     "start": "gulp start",
     "stylelint": "stylelint \"src/sass/**/*.scss\" --syntax scss",
