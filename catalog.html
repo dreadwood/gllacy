@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8"/>
+    <title>HTML Academy: Глейси – Каталог</title>
+    <link rel="stylesheet" href="css/style.min.css"/>
+    <link rel="preload" href="fonts/roboto-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
+    <link rel="preload" href="fonts/roboto-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
+    <link rel="preload" href="fonts/roboto-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
+    <link rel="manifest" href="/manifest.webmanifest"/>
+    <link rel="icon" href="/favicon.ico"/>
+    <link rel="icon" href="/icon.svg" type="image/svg+xml"/>
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+    <meta property="og:title" content="Проект-макет верстки «Глэйси»"/>
+    <meta property="og:description" content="Интернет-магазин по продаже мороженного собственного производства"/>
+    <meta property="og:image" content="https://dreadwood.github.io/gllacy/img/og-image.jpg"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://dreadwood.github.io/gllacy/"/>
+    <meta property="og:locale" content="ru_RU"/>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__wrapper"><a class="header__logo" href="index.html">
+          <svg class="header__logo-icon" width="154" height="64" role="img" aria-label="Логотип магазина Gllacy">
+            <use xlink:href="img/sprite.svg#icon-logo-gllacy"></use>
+          </svg></a>
+        <nav class="header__menu">
+          <ul class="menu-top">
+            <li class="menu-top__dropdown"><a class="menu-top__link" tabindex="0">Каталог</a>
+              <div class="menu-top__dropdown-menu"><a class="menu-top__dropdown-link menu-top__dropdown-link--mark" href="catalog.html">Новинки</a><a class="menu-top__dropdown-link">Сливочное</a><a class="menu-top__dropdown-link" href="catalog.html">Щербеты</a><a class="menu-top__dropdown-link" href="catalog.html">Фруктовый лед</a><a class="menu-top__dropdown-link" href="catalog.html">Мелорин</a></div>
+            </li>
+            <li class="menu-top__dropdown"><a class="menu-top__link" href="#">Доставка и оплата</a></li>
+            <li class="menu-top__dropdown"><a class="menu-top__link" href="#">О компании</a></li>
+          </ul>
+        </nav>
+        <div class="header__btn-list">
+          <div class="header__btn">
+            <div class="btn-drop btn-drop--search">
+              <button class="btn-drop__btn" type="button" aria-label="Поиск">
+                <svg class="btn-drop__svg" width="16" height="16" focusable="false" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#icon-search"></use>
+                </svg>
+              </button>
+              <div class="btn-drop__dropdown">
+                <form class="search" action="https://echo.htmlacademy.ru" method="get">
+                  <label class="visually-hidden" for="search_value">Поиск по сайту</label>
+                  <input class="input" id="search_value" type="search" name="search_value" placeholder="Крем-брюле" required="required"/>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="header__btn">
+            <div class="btn-drop btn-drop--login">
+              <button class="btn-drop__btn" type="button">
+                <svg class="btn-drop__svg" width="20" height="19" focusable="false" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#icon-login"></use>
+                </svg>Вход
+              </button>
+              <div class="btn-drop__dropdown">
+                <form class="login" action="https://echo.htmlacademy.ru" method="post">
+                  <label class="visually-hidden" for="login_email">Электронная почта</label>
+                  <input class="login__input input" id="login_email" type="email" name="login_email" placeholder="email@example.com" required="required"/>
+                  <label class="visually-hidden" for="login_pass">Пароль</label>
+                  <input class="login__input input" id="login_pass" type="password" name="login_pass" placeholder="......" required="required"/>
+                  <button class="login__btn main-btn" type="submit">Войти</button>
+                  <div class="login__link-list"><a class="login__link login__link--pass" href="#">Забыли пароль?</a><a class="login__link login__link--reg" href="#">Новая регистрация</a></div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="header__btn">
+            <div class="btn-drop btn-drop--bag btn-drop--bag-full">
+              <button class="btn-drop__btn" type="button">
+                <svg class="btn-drop__svg" width="21" height="20" focusable="false" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#icon-bag-full"></use>
+                </svg>2 товара
+              </button>
+              <div class="btn-drop__dropdown">
+                <div class="bag">
+                  <div class="bag__list">
+                    <div class="bag__product">
+                      <button class="bag__prod-del" type="button" aria-label="Удалить товар">
+                        <svg class="bag__prod-del-icon" width="11" height="11" focusable="false" aria-hidden="true">
+                          <use xlink:href="img/sprite.svg#icon-cross"></use>
+                        </svg>
+                      </button>
+                      <picture>
+                        <source type="image/webp" srcset="img/ice-сream-01@1x.webp 1x, img/ice-сream-01@2x.webp 2x"/><img class="bag__prod-img" src="img/ice-сream-01@1x.jpg" srcset="img/ice-сream-01@2x.jpg 2x" width="33" height="33" alt=""/>
+                      </picture><span class="bag__prod-name">Пломбир с апельсиновым джемом</span><span class="bag__prod-weight">1,5 кг х</span><span class="bag__prod-price">200 руб.</span><span class="bag__prod-cost">300 руб.</span>
+                    </div>
+                    <div class="bag__product">
+                      <button class="bag__prod-del" type="button" aria-label="Удалить товар">
+                        <svg class="bag__prod-del-icon" width="11" height="11" focusable="false" aria-hidden="true">
+                          <use xlink:href="img/sprite.svg#icon-cross"></use>
+                        </svg>
+                      </button>
+                      <picture>
+                        <source type="image/webp" srcset="img/ice-сream-03@1x.webp 1x, img/ice-сream-03@2x.webp 2x"/><img class="bag__prod-img" src="img/ice-сream-03@1x.jpg" srcset="img/ice-сream-03@2x.jpg 2x" width="33" height="33" alt=""/>
+                      </picture><span class="bag__prod-name">Клубничный пломбир с присыпкой из белого шоколада</span><span class="bag__prod-weight">1,5 кг х</span><span class="bag__prod-price">300 руб.</span><span class="bag__prod-cost">450 руб.</span>
+                    </div>
+                  </div>
+                  <p class="bag__cost">Итого: 750 руб.</p><a class="bag__btn main-btn" href="#">Оформить заказ</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__contact">
+          <p class="header__contact-working-hours">с 10 до 20, ежедневно</p><a class="header__contact-tel" href="tel:+78124502525">8 812 450-25-25</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="catalog">
+        <h1 class="visually-hidden">Страница с товарами</h1>
+        <div class="catalog__wrapper">
+          <div class="catalog__breadcrumbs">
+            <h2 class="visually-hidden">Навигация</h2>
+            <ul class="breadcrumbs">
+              <li class="breadcrumbs__item"><a class="breadcrumbs__link link" href="index.html">Главная</a></li>
+              <li class="breadcrumbs__item"><a class="breadcrumbs__link link" href="#">Каталог</a></li>
+              <li class="breadcrumbs__item"><a class="breadcrumbs__link link">Сливочное</a></li>
+            </ul>
+          </div>
+          <h2 class="catalog__title">Сливочное мороженое</h2>
+          <div class="catalog__filters">
+            <form class="filters" action="https://echo.htmlacademy.ru" method="get">
+              <div class="filters__row">
+                <fieldset class="filters__fieldset">
+                  <legend class="filters__title">Сортировка:</legend>
+                  <label class="visually-hidden" for="sort">Выберите тип сортировки</label>
+                  <select class="filters__select" id="sort" name="filter_sort">
+                    <option value="popularity" selected="selected">по популярности</option>
+                    <option value="cheap">сначала недорогие</option>
+                    <option value="expensive">сначала дорогие</option>
+                    <option value="fat">по жирности</option>
+                  </select>
+                </fieldset>
+                <fieldset class="filters__fieldset filters__fieldset--price">
+                  <legend class="filters__title filters__title--price">Цена: 100 ₽ – 500 ₽:</legend>
+                  <div class="filters__group">
+                    <div id="slider"></div>
+                    <input class="filters__price filters__price--min" type="number" name="filter_mix_price" min="50" max="700" value="100"/>
+                    <input class="filters__price filters__price--max" type="number" name="filter_max_price" min="50" max="700" value="500"/>
+                  </div>
+                </fieldset>
+                <fieldset class="filters__fieldset">
+                  <legend class="filters__title">Жирность:</legend>
+                  <div class="filters__group">
+                    <input class="filters__radio visually-hidden" id="filter_fat_0" type="radio" name="filter_fat" value="0"/>
+                    <label class="filters__label filters__label--radio" for="filter_fat_0">
+                      <svg class="filters__icon filters__icon--radio-on" width="24" height="20" focusable="false" aria-hidden="true">
+                        <use xlink:href="img/sprite.svg#icon-radio-actv"></use>
+                      </svg>
+                      <svg class="filters__icon filters__icon--radio-off" width="20" height="20" focusable="false" aria-hidden="true">
+                        <use xlink:href="img/sprite.svg#icon-radio"></use>
+                      </svg>0%
+                    </label>
+                    <input class="filters__radio visually-hidden" id="filter_fat_10" type="radio" name="filter_fat" value="10" checked="checked"/>
+                    <label class="filters__label filters__label--radio" for="filter_fat_10">
+                      <svg class="filters__icon filters__icon--radio-on" width="24" height="20" focusable="false" aria-hidden="true">
+                        <use xlink:href="img/sprite.svg#icon-radio-actv"></use>
+                      </svg>
+                      <svg class="filters__icon filters__icon--radio-off" width="20" height="20" focusable="false" aria-hidden="true">
+                        <use xlink:href="img/sprite.svg#icon-radio"></use>
+                      </svg>до 10%
+                    </label>
+                    <input class="filters__radio visually-hidden" id="filter_fat_30" type="radio" name="filter_fat" value="30"/>
+                    <label class="filters__label filters__label--radio" for="filter_fat_30">
+                      <svg class="filters__icon filters__icon--radio-on" width="24" height="20" focusable="false" aria-hidden="true">
+                        <use xlink:href="img/sprite.svg#icon-radio-actv"></use>
+                      </svg>
+                      <svg class="filters__icon filters__icon--radio-off" width="20" height="20" focusable="false" aria-hidden="true">
+                        <use xlink:href="img/sprite.svg#icon-radio"></use>
+                      </svg>до 30%
+                    </label>
+                    <input class="filters__radio visually-hidden" id="filter_fat_more_30" type="radio" name="filter_fat" value="more_30"/>
+                    <label class="filters__label filters__label--radio" for="filter_fat_more_30">
+                      <svg class="filters__icon filters__icon--radio-on" width="24" height="20" focusable="false" aria-hidden="true">
+                        <use xlink:href="img/sprite.svg#icon-radio-actv"></use>
+                      </svg>
+                      <svg class="filters__icon filters__icon--radio-off" width="20" height="20" focusable="false" aria-hidden="true">
+                        <use xlink:href="img/sprite.svg#icon-radio"></use>
+                      </svg>выше 30%
+                    </label>
+                  </div>
+                </fieldset>
+              </div>
+              <div class="filters__row">
+                <fieldset class="filters__fieldset">
+                  <legend class="filters__title">Наполнители:</legend>
+                  <div class="filters__group">
+                    <input class="filters__check visually-hidden" id="filter_composition_chocolate" type="checkbox" name="filter_composition" value="chocolate" checked="checked"/>
+                    <label class="filters__label filters__label--check" for="filter_composition_chocolate">
+                      <svg class="filters__icon filters__icon--check-on" width="24" height="20" focusable="false" aria-hidden="true">
+                        <use xlink:href="img/sprite.svg#icon-checkbox-actv"></use>
+                      </svg>
+                      <svg class="filters__icon filters__icon--check-off" width="20" height="20" focusable="false" aria-hidden="true">
+                        <use xlink:href="img/sprite.svg#icon-checkbox"></use>
+                      </svg>шоколадные
+                    </label>
+                    <input class="filters__check visually-hidden" id="filter_composition_sugar" type="checkbox" name="filter_composition" value="sugar" checked="checked"/>
+                    <label class="filters__label filters__label--check" for="filter_composition_sugar">
+                      <svg class="filters__icon filters__icon--check-on" width="24" height="20" focusable="false" aria-hidden="true">
+                        <use xlink:href="img/sprite.svg#icon-checkbox-actv"></use>
+                      </svg>
+                      <svg class="filters__icon filters__icon--check-off" width="20" height="20" focusable="false" aria-hidden="true">
+                        <use xlink:href="img/sprite.svg#icon-checkbox"></use>
+                      </svg>сахарные присыпки
+                    </label>
+                    <input class="filters__check visually-hidden" id="filter_composition_fruit" type="checkbox" name="filter_composition" value="fruit"/>
+                    <label class="filters__label filters__label--check" for="filter_composition_fruit">
+                      <svg class="filters__icon filters__icon--check-on" width="24" height="20" focusable="false" aria-hidden="true">
+                        <use xlink:href="img/sprite.svg#icon-checkbox-actv"></use>
+                      </svg>
+                      <svg class="filters__icon filters__icon--check-off" width="20" height="20" focusable="false" aria-hidden="true">
+                        <use xlink:href="img/sprite.svg#icon-checkbox"></use>
+                      </svg>фрукты
+                    </label>
+                    <input class="filters__check visually-hidden" id="filter_composition_syrup" type="checkbox" name="filter_composition" value="syrup"/>
+                    <label class="filters__label filters__label--check" for="filter_composition_syrup">
+                      <svg class="filters__icon filters__icon--check-on" width="24" height="20" focusable="false" aria-hidden="true">
+                        <use xlink:href="img/sprite.svg#icon-checkbox-actv"></use>
+                      </svg>
+                      <svg class="filters__icon filters__icon--check-off" width="20" height="20" focusable="false" aria-hidden="true">
+                        <use xlink:href="img/sprite.svg#icon-checkbox"></use>
+                      </svg>сиропы
+                    </label>
+                    <input class="filters__check visually-hidden" id="filter_composition_jam" type="checkbox" name="filter_composition" value="jam"/>
+                    <label class="filters__label filters__label--check" for="filter_composition_jam">
+                      <svg class="filters__icon filters__icon--check-on" width="24" height="20" focusable="false" aria-hidden="true">
+                        <use xlink:href="img/sprite.svg#icon-checkbox-actv"></use>
+                      </svg>
+                      <svg class="filters__icon filters__icon--check-off" width="20" height="20" focusable="false" aria-hidden="true">
+                        <use xlink:href="img/sprite.svg#icon-checkbox"></use>
+                      </svg>джемы
+                    </label>
+                  </div>
+                </fieldset>
+                <button class="filters__btn" type="submit">Применить</button>
+              </div>
+            </form>
+          </div>
+          <div class="catalog__grid">
+            <div class="product" tabindex="0">
+              <div class="product__img-wrapper">
+                <picture>
+                  <source type="image/webp" srcset="img/ice-сream-01@1x.webp 1x, img/ice-сream-01@2x.webp 2x"/><img class="product__img" src="img/ice-сream-01@1x.jpg" srcset="img/ice-сream-01@2x.jpg 2x" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"/>
+                </picture>
+                <p class="product__price">310 ₽<span class="product__units"> /кг</span></p>
+              </div>
+              <h3 class="product__title">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
+              <div class="product__hvr-wrapper"><a class="product__btn main-btn" href="#">Быстрый просмотр</a></div>
+            </div>
+            <div class="product" tabindex="0">
+              <div class="product__img-wrapper">
+                <picture>
+                  <source type="image/webp" srcset="img/ice-сream-02@1x.webp 1x, img/ice-сream-02@2x.webp 2x"/><img class="product__img" src="img/ice-сream-02@1x.jpg" srcset="img/ice-сream-02@2x.jpg 2x" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада"/>
+                </picture>
+                <p class="product__price">380 ₽<span class="product__units"> /кг</span></p>
+              </div>
+              <h3 class="product__title">Сливочно-кофейное с кусочками шоколада</h3>
+              <div class="product__hvr-wrapper"><a class="product__btn main-btn" href="#">Быстрый просмотр</a></div>
+            </div>
+            <div class="product" tabindex="0">
+              <div class="product__img-wrapper">
+                <picture>
+                  <source type="image/webp" srcset="img/ice-сream-03@1x.webp 1x, img/ice-сream-03@2x.webp 2x"/><img class="product__img" src="img/ice-сream-03@1x.jpg" srcset="img/ice-сream-03@2x.jpg 2x" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада"/>
+                </picture>
+                <p class="product__price">355 ₽<span class="product__units"> /кг</span></p>
+              </div>
+              <h3 class="product__title">Сливочно-клубничное с присыпкой из белого шоколада</h3>
+              <div class="product__hvr-wrapper"><a class="product__btn main-btn" href="#">Быстрый просмотр</a></div>
+            </div>
+            <div class="product" tabindex="0">
+              <div class="product__img-wrapper">
+                <picture>
+                  <source type="image/webp" srcset="img/ice-сream-04@1x.webp 1x, img/ice-сream-04@2x.webp 2x"/><img class="product__img" src="img/ice-сream-04@1x.jpg" srcset="img/ice-сream-04@2x.jpg 2x" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой"/>
+                </picture>
+                <p class="product__price">415 ₽<span class="product__units"> /кг</span></p>
+              </div>
+              <h3 class="product__title">Сливочное крем-брюле с карамельной подливкой</h3>
+              <div class="product__hvr-wrapper"><a class="product__btn main-btn" href="#">Быстрый просмотр</a></div>
+            </div>
+            <div class="product" tabindex="0">
+              <div class="product__img-wrapper">
+                <picture>
+                  <source type="image/webp" srcset="img/ice-сream-05@1x.webp 1x, img/ice-сream-05@2x.webp 2x"/><img class="product__img" src="img/ice-сream-05@1x.jpg" srcset="img/ice-сream-05@2x.jpg 2x" width="267" height="267" alt="Сливочное с брусничным джемом"/>
+                </picture>
+                <p class="product__price">325 ₽<span class="product__units"> /кг</span></p>
+              </div>
+              <h3 class="product__title">Сливочное с брусничным джемом</h3>
+              <div class="product__hvr-wrapper"><a class="product__btn main-btn" href="#">Быстрый просмотр</a></div>
+            </div>
+            <div class="product" tabindex="0">
+              <div class="product__img-wrapper">
+                <picture>
+                  <source type="image/webp" srcset="img/ice-сream-06@1x.webp 1x, img/ice-сream-06@2x.webp 2x"/><img class="product__img" src="img/ice-сream-06@1x.jpg" srcset="img/ice-сream-06@2x.jpg 2x" width="267" height="267" alt="Сливочно-черничное с цельными ягодами черники"/>
+                </picture>
+                <p class="product__price">410 ₽<span class="product__units"> /кг</span></p>
+              </div>
+              <h3 class="product__title">Сливочно-черничное с цельными ягодами черники</h3>
+              <div class="product__hvr-wrapper"><a class="product__btn main-btn" href="#">Быстрый просмотр</a></div>
+            </div>
+            <div class="product" tabindex="0">
+              <div class="product__img-wrapper">
+                <picture>
+                  <source type="image/webp" srcset="img/ice-сream-07@1x.webp 1x, img/ice-сream-07@2x.webp 2x"/><img class="product__img" src="img/ice-сream-07@1x.jpg" srcset="img/ice-сream-07@2x.jpg 2x" width="267" height="267" alt="Сливочно-лимонное с карамельной присыпкой"/>
+                </picture>
+                <p class="product__price">315 ₽<span class="product__units"> /кг</span></p>
+              </div>
+              <h3 class="product__title">Сливочно-лимонное с карамельной присыпкой</h3>
+              <div class="product__hvr-wrapper"><a class="product__btn main-btn" href="#">Быстрый просмотр</a></div>
+            </div>
+            <div class="product" tabindex="0">
+              <div class="product__img-wrapper">
+                <picture>
+                  <source type="image/webp" srcset="img/ice-сream-08@1x.webp 1x, img/ice-сream-08@2x.webp 2x"/><img class="product__img" src="img/ice-сream-08@1x.jpg" srcset="img/ice-сream-08@2x.jpg 2x" width="267" height="267" alt="Сливочное с шоколадной стружкой"/>
+                </picture>
+                <p class="product__price">320 ₽<span class="product__units"> /кг</span></p>
+              </div>
+              <h3 class="product__title">Сливочное с шоколадной стружкой</h3>
+              <div class="product__hvr-wrapper"><a class="product__btn main-btn" href="#">Быстрый просмотр</a></div>
+            </div>
+            <div class="product" tabindex="0">
+              <div class="product__img-wrapper">
+                <picture>
+                  <source type="image/webp" srcset="img/ice-сream-09@1x.webp 1x, img/ice-сream-09@2x.webp 2x"/><img class="product__img" src="img/ice-сream-09@1x.jpg" srcset="img/ice-сream-09@2x.jpg 2x" width="267" height="267" alt="Сливочно-ванильное с кусочками шоколада"/>
+                </picture>
+                <p class="product__price">440 ₽<span class="product__units"> /кг</span></p>
+              </div>
+              <h3 class="product__title">Сливочно-ванильное с кусочками шоколада</h3>
+              <div class="product__hvr-wrapper"><a class="product__btn main-btn" href="#">Быстрый просмотр</a></div>
+            </div>
+            <div class="product" tabindex="0">
+              <div class="product__img-wrapper">
+                <picture>
+                  <source type="image/webp" srcset="img/ice-сream-10@1x.webp 1x, img/ice-сream-10@2x.webp 2x"/><img class="product__img" src="img/ice-сream-10@1x.jpg" srcset="img/ice-сream-10@2x.jpg 2x" width="267" height="267" alt="Сливочноe с ментоловым сиропом"/>
+                </picture>
+                <p class="product__price">435 ₽<span class="product__units"> /кг</span></p>
+              </div>
+              <h3 class="product__title">Сливочноe с ментоловым сиропом</h3>
+              <div class="product__hvr-wrapper"><a class="product__btn main-btn" href="#">Быстрый просмотр</a></div>
+            </div>
+            <div class="product" tabindex="0">
+              <div class="product__img-wrapper">
+                <picture>
+                  <source type="image/webp" srcset="img/ice-сream-11@1x.webp 1x, img/ice-сream-11@2x.webp 2x"/><img class="product__img" src="img/ice-сream-11@1x.jpg" srcset="img/ice-сream-11@2x.jpg 2x" width="267" height="267" alt="Сливочное с кусочками черного шоколада"/>
+                </picture>
+                <p class="product__price">355 ₽<span class="product__units"> /кг</span></p>
+              </div>
+              <h3 class="product__title">Сливочное с кусочками черного шоколада</h3>
+              <div class="product__hvr-wrapper"><a class="product__btn main-btn" href="#">Быстрый просмотр</a></div>
+            </div>
+            <div class="product" tabindex="0">
+              <div class="product__img-wrapper">
+                <picture>
+                  <source type="image/webp" srcset="img/ice-сream-12@1x.webp 1x, img/ice-сream-12@2x.webp 2x"/><img class="product__img" src="img/ice-сream-12@1x.jpg" srcset="img/ice-сream-12@2x.jpg 2x" width="267" height="267" alt="Сливочное с мятным сиропом"/>
+                </picture>
+                <p class="product__price">420 ₽<span class="product__units"> /кг</span></p>
+              </div>
+              <h3 class="product__title">Сливочное с мятным сиропом</h3>
+              <div class="product__hvr-wrapper"><a class="product__btn main-btn" href="#">Быстрый просмотр</a></div>
+            </div>
+          </div>
+          <div class="catalog__pagination">
+            <div class="pagination"><a class="pagination__nav pagination__nav--prev">
+                <svg class="pagination__nav-icon" width="7" height="12" focusable="false" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#icon-pag-arrow"></use>
+                </svg></a>
+              <ul class="pagination__list">
+                <li class="pagination__item"><a class="pagination__link">1</a></li>
+                <li class="pagination__item"><a class="pagination__link" href="#" aria-label="Страница 2">2</a></li>
+                <li class="pagination__item"><a class="pagination__link" href="#" aria-label="Страница 3">3</a></li>
+                <li class="pagination__item"><a class="pagination__link" href="#" aria-label="Страница 4">4</a></li>
+                <li class="pagination__item"><a class="pagination__link" href="#" aria-label="Страница 5">5</a></li>
+              </ul><a class="pagination__nav pagination__nav--next" href="#" aria-label="Следующая страница">
+                <svg class="pagination__nav-icon" width="7" height="12" focusable="false" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#icon-pag-arrow"></use>
+                </svg></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <div class="footer__social">
+          <ul class="social-list">
+            <li class="social-list__item"><a class="social-list__link" href="#" target="_blank" aria-label="Страница в фейсбуке">
+                <svg class="social-list__img" width="32" height="32" focusable="false" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#icon-fb"></use>
+                </svg></a></li>
+            <li class="social-list__item"><a class="social-list__link" href="#" target="_blank" aria-label="Группа в контакте">
+                <svg class="social-list__img" width="32" height="32" focusable="false" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#icon-vk"></use>
+                </svg></a></li>
+            <li class="social-list__item"><a class="social-list__link" href="#" target="_blank" aria-label="Профиль в инстаграме">
+                <svg class="social-list__img" width="32" height="32" focusable="false" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#icon-insta"></use>
+                </svg></a></li>
+            <li class="social-list__item"><a class="social-list__link" href="#" target="_blank" aria-label="Аккаунт в твитере">
+                <svg class="social-list__img" width="32" height="32" focusable="false" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#icon-twitter"></use>
+                </svg></a></li>
+          </ul>
+        </div>
+        <div class="footer__info">
+          <ul class="info-links">
+            <li class="info-links__item"><a class="info-links__link info-links__link--icon link" href="#">
+                <svg width="15" height="13" focusable="false" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#icon-heart"></use>
+                </svg>Для поставщиков</a>
+            </li>
+            <li class="info-links__item"><a class="info-links__link link" href="#">Наши документы</a>
+            </li>
+            <li class="info-links__item"><a class="info-links__link link" href="#">О производстве</a>
+            </li>
+            <li class="info-links__item"><a class="info-links__link link" href="#">Экологические стандарты</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__copyright">
+          <div class="copyright"><img class="copyright__logo" src="img/logo-academy.svg" width="108" height="39" alt="Логотип компании HTML academy"/><span class="copyright__text">Сделано в <a class='copyright__link link' href='https://htmlacademy.ru/intensive/htmlcss' target='_blank' rel='noreferrer'>HTML Academy</a> © 2020</span></div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/vendor.min.js"></script>
+    <script src="js/script.min.js"></script>
+  </body>
+</html>
