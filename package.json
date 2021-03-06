@@ -36,7 +36,7 @@
     "gulp-uglify": "3.0.2",
     "gulp-webp": "4.0.1",
     "postcss": "8.2.4",
-    "pug": "3.0.0",
+    "pug": "3.0.2",
     "push-dir": "0.4.1",
     "stylelint": "13.9.0",
     "stylelint-config-htmlacademy": "0.1.4",
