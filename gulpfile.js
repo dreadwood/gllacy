@@ -22,12 +22,12 @@ const style = () => {
     .pipe(sourcemap.init())
     .pipe(sass())
     .pipe(postcss([autoprefixer()]))
-    .pipe(gulp.dest('dist/css'))
-    .pipe(csso())
-    .pipe(rename('style.min.css'))
     .pipe(sourcemap.write('.'))
     .pipe(gulp.dest('dist/css'))
-    .pipe(sync.stream());
+    .pipe(sync.stream()) // watch only style.css
+    .pipe(csso())
+    .pipe(rename('style.min.css'))
+    .pipe(gulp.dest('dist/css'));
 };
 
 const html = () => {
@@ -62,28 +62,34 @@ const sprite = () => {
 };
 
 const jsVendor = () => {
-  return gulp.src('src/js/vendor/*.js')
+  gulp.src('src/js/vendor/*.js')
     .pipe(sourcemap.init())
     .pipe(concat('vendor.js'))
-    .pipe(gulp.dest('dist/js'))
+    .pipe(sourcemap.write('.'))
+    .pipe(gulp.dest('dist/js'));
+
+  return gulp.src('src/js/vendor/*.js')
+    .pipe(concat('vendor.js'))
     .pipe(uglify())
     .pipe(rename('vendor.min.js'))
-    .pipe(sourcemap.write('.'))
     .pipe(gulp.dest('dist/js'));
 };
 
 const jsScript = () => {
-  return gulp.src('src/js/modules/*.js')
-    .pipe(order([
-      'utils.js',
-      '*.js',
-    ]))
-    .pipe(sourcemap.init())
+  const scripts = gulp.src('src/js/modules/*.js')
+  .pipe(order([
+    'utils.js',
+    '*.js',
+  ]));
+
+  scripts.pipe(sourcemap.init())
     .pipe(concat('script.js'))
-    .pipe(gulp.dest('dist/js'))
+    .pipe(sourcemap.write('.'))
+    .pipe(gulp.dest('dist/js'));
+
+  return scripts.pipe(concat('script.js'))
     .pipe(uglify())
     .pipe(rename('script.min.js'))
-    .pipe(sourcemap.write('.'))
     .pipe(gulp.dest('dist/js'));
 };
 
