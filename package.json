@@ -35,7 +35,7 @@
     "gulp-svgstore": "7.0.1",
     "gulp-uglify": "3.0.2",
     "gulp-webp": "4.0.1",
-    "postcss": "8.2.4",
+    "postcss": "8.2.10",
     "pug": "3.0.2",
     "push-dir": "0.4.1",
     "stylelint": "13.9.0",
