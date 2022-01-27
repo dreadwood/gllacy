@@ -1,13 +1,19 @@
-# Личный проект «Глейси» [![Dependency status][dependency-image]][dependency-url]
-
-* Студент: [srg](https://up.htmlacademy.ru/htmlcss/29/user/1028327).
-* Наставник: [He Who Must Not Be Named](https://www.youtube.com/watch?v=dQw4w9WgXcQ).
+# Макет «Глейси» 
 
 **Опубликованная версия доступна [тут](https://dreadwood.github.io/gllacy/)**
 
----
+## О проекте
 
-**Основные команды для работы:**
+![Главный экран](src/img/main-screen.jpg)
+
+- Для верстки макета используеться шаблонизатор [Pug](https://pugjs.org/api/getting-started.html), для стилей [Sass](https://sass-lang.com/)
+- Оптимизирует изображения, склеивает векторный спрайт, собирает проект [Gulp](https://gulpjs.com/)
+- Используеться [stylelint](https://stylelint.io/) и [eslint](https://eslint.org/)
+- Макет имеет только десктопную реализацию
+
+## Разработка
+
+### Основные команды:
 
 * Установка - `npm i`
 * Сборка проекта - `npm run build`
@@ -15,16 +21,8 @@
 * Запуск тестирования на соответствия код-гайдам - `npm run test`
 * Обновить версию Github Pages (перед выполнением нужно собрать проект) - `gh-pages`
 
-**Каталоги:**
+### Каталоги:
 
 * Все разработка ведёться в директории `src/`
 * Итоговый код попадает в директорию `dist/`
 
----
-
-<a href="https://htmlacademy.ru/intensive/htmlcss"><img align="left" width="50" height="50" alt="HTML Academy" src="https://up.htmlacademy.ru/static/img/intensive/htmlcss/logo-for-github-2.png"></a>
-
-Репозиторий создан для обучения на профессиональном онлайн‑курсе «[HTML и CSS. Профессиональная вёрстка сайтов](https://htmlacademy.ru/intensive/htmlcss)» от [HTML Academy](https://htmlacademy.ru).
-
-[dependency-image]: https://david-dm.org/dreadwood/gllacy/dev-status.svg?style=flat-square
-[dependency-url]: https://david-dm.org/dreadwood/gllacy?type=dev

@@ -1,9 +1,7 @@
 {
   "name": "gllacy",
   "version": "1.0.0",
-  "description": "Учебный проект HTML academy собранный с помощью pug (https://pugjs.org/api/getting-started.html)",
-  "author": "dreadwood",
-  "homepage": "https://github.com/dreadwood/gllacy#readme",
+  "description": "Макет Glascy",
   "scripts": {
     "build": "gulp build",
     "editorconfig": "editorconfig-checker",
